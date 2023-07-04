@@ -53,7 +53,7 @@ Typography
   --primary-color-opacity-low: rgb(51, 104, 250, 0.1);
   --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
   --bg-color1: #FCF2EC;
-  --bg-color2: #282c34;
+  --bg-color2: #F1F3F4;
   --bg-color3: #152748;
   --bg-color4: #424449;
   --body-color: #707070;
@@ -115,7 +115,7 @@ preloader section start
 preloader end
 ----------------------------------------------*/
 /*----------------------------------------------
-scroll up start
+scroll up section start
 ----------------------------------------------*/
 .scroll-up {
   position: fixed;
@@ -155,7 +155,7 @@ scroll up start
 }
 
 /*----------------------------------------------
-end
+scroll up end
 ----------------------------------------------*/
 *,
 *::after,
@@ -402,7 +402,7 @@ Breadcrumb start
 }
 
 /*----------------------------------------------
-end
+Breadcrumb end
 ----------------------------------------------*/
 p {
   color: #474D57;
@@ -448,7 +448,7 @@ h1 {
 h2 {
   font-size: 36px;
   text-transform: capitalize;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-weight: 500;
   color: var(--heading-color);
 }
@@ -575,7 +575,7 @@ end
 Reuseble style section start
 ----------------------------------------------*/
 /*----------------------------------------------
-Offcanvaes section start 
+Offcanvas section start 
 ----------------------------------------------*/
 .offcanvas {
   background: var(--bg-color1);
@@ -596,7 +596,7 @@ Offcanvaes section start
 }
 
 /*----------------------------------------------
-end 
+Offcanvas end 
 ----------------------------------------------*/
 .animation1 {
   position: relative;
@@ -675,7 +675,7 @@ end
   }
 }
 .section-header {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .top-right-radius-0 {
@@ -883,7 +883,7 @@ Alerts section start
 }
 
 /*----------------------------------------------
-end 
+Alerts end 
 ----------------------------------------------*/
 /*----------------------------------------------
 Cmn tab section start 
@@ -924,7 +924,7 @@ Cmn tab section start
   }
 }
 /*----------------------------------------------
-end
+Cmn tab end
 ----------------------------------------------*/
 /*----------------------------------------------
 Cmn tab2 section start 
@@ -944,7 +944,7 @@ Cmn tab2 section start
 }
 
 /*----------------------------------------------
-end 
+Cmn tab2 end 
 ----------------------------------------------*/
 .video-play-btn {
   position: absolute;
@@ -989,14 +989,7 @@ section {
   font-size: 18px;
   color: var(--primary-color);
   font-weight: 400;
-  max-width: 662px;
-  position: relative;
-  display: inline-block;
-  font-family: "Meddon", cursive;
-  margin-bottom: 20px;
-  padding: 3px 20px;
-  border-radius: 15px;
-  background-color: var(--primary-color-opacity-low);
+  margin-bottom: 10px;
 }
 
 @media (max-width: 991px) {
@@ -1159,6 +1152,12 @@ hr.divider:after {
 .slider-value {
   margin-top: 10px;
   text-align: center;
+}
+
+.bg-img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 /*----------------------------------------------
@@ -1436,14 +1435,14 @@ Padding bottom
   background-color: var(--white);
   box-shadow: var(--shadow2);
   z-index: 999;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 .navbar.active .custom-nav {
   padding: 0;
 }
 
 .custom-nav {
-  padding: 15px 20px;
+  padding: 20px;
   background-color: var(--white);
   transition: var(--transition);
   border-radius: 15px;
@@ -1615,11 +1614,13 @@ Hero end
 /*----------------------------------------------
 04. Calculator section start
 ----------------------------------------------*/
+.calculator-section {
+  margin-top: -130px;
+}
 .calculator-section .calculator {
   background-color: var(--white);
   padding: 30px;
   border-radius: 15px;
-  margin-top: -230px;
   box-shadow: var(--shadow1);
 }
 .calculator-section .calculator .form-text span:not(:last-child) {
@@ -1665,43 +1666,18 @@ Calculator start
 /*----------------------------------------------
 04. Feature section start
 ----------------------------------------------*/
-.feature-section {
-  background-color: var(--bg-color1);
-}
-.feature-section .feature-mid-section {
-  display: flex;
-  justify-content: center;
-}
-.feature-section .feature-mid-section .feature-thum {
-  position: absolute;
-  bottom: 0;
-}
-.feature-section .feature-mid-section .feature-thum img {
-  max-width: 450px;
-}
-
-.feature-box {
-  display: flex;
-  margin-bottom: 30px;
-  background-color: white;
-  padding: 10px 15px;
-  border-radius: 50px;
-  align-items: center;
-  max-width: 85%;
-}
-
 .icon-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
   width: 70px;
   min-width: 70px;
   height: 70px;
   box-shadow: var(--shadow3);
-  border-radius: 50px;
+  border-radius: 10px;
   color: var(--primary-color);
-  font-size: 26px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .text-box .highlight {
@@ -1758,8 +1734,14 @@ Feature end
 /*----------------------------------------------
 05. About section start
 ----------------------------------------------*/
+.about-section {
+  background-color: var(--bg-color2);
+}
 .about-section .about-thum {
-  max-width: 400px;
+  max-width: 630px;
+}
+.about-section .about-thum img {
+  border-radius: 10px;
 }
 .about-section .about-content .btn-area {
   margin-top: 30px;
