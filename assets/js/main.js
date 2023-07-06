@@ -148,12 +148,11 @@ $(document).ready(function () {
         "use strict";
         $('.testimonial-carousel').owlCarousel({
             loop: true,
-            autoplay: false,
-            center: true,
+            autoplay: true,
             margin: 10,
             nav: false,
             dots: true,
-            rtl: true,
+            // rtl: true,
             responsive: {
                 0: {
                     items: 1
@@ -168,31 +167,6 @@ $(document).ready(function () {
         });
     });
     // Testimonial section start
-
-
-    // noUiSlider1 start pricing plan
-    var nonLinearSlider = document.getElementById('slider');
-    noUiSlider.create(nonLinearSlider, {
-        connect: true,
-        behaviour: 'tap',
-        start: [10],
-        range: {
-            'min': [0],
-            'max': [100]
-        }
-    });
-    var nodes = [
-        document.getElementById('slider-value'),
-    ];
-
-    // Display the slider value and how far the handle moved
-    // from the left edge of the slider.
-    nonLinearSlider.noUiSlider.on('update', function (values, handle, unencoded, isTap, positions) {
-        nodes[handle].innerHTML = values[handle] + ', ';
-    });
-    // noUiSlider end
-
-
 
 
     // cmn-select2

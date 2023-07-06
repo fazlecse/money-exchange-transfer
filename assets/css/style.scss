@@ -15,7 +15,7 @@ Version       : 1.0
 03. Hero section start
 04. Feature section start
 05. About section start
-06. Pricing section start
+06. How it works section start
 07. Testimonial section start
 08. How it works section start
 09. Faq section start
@@ -37,7 +37,7 @@ Version       : 1.0
 /*----------------------------------------------
 Typography 
 ----------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kanit:wght@300;400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800;900&display=swap');
 
 :root {
     --body-font: 'Inter', sans-serif;
@@ -49,6 +49,8 @@ Typography
     --white: #ffffff;
     --soft-blue: #C1BFFD;
     --grayish-violet: #f5f4f7;
+    --btn-bg1: #51B6BB;
+    --btn-bg2: #3b99a2;
     --soft-green: #ccf888;
     --soft-red: #FE5758;
     --soft-red: #d82a68;
@@ -58,7 +60,8 @@ Typography
     --input-color: #FAFAFA;
     --primary-color-opacity-low: rgb(51, 104, 250, 0.1);
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
-    --bg-color1: #FCF2EC;
+    // --bg-color1: #FCF2EC;
+    --bg-color1: #52b7bc1a;
     --bg-color2: #F1F3F4;
     --bg-color3: #152748;
     --bg-color4: #424449;
@@ -416,7 +419,7 @@ Breadcrumb start
             .breadcrumb-item {
                 &::before {
                     content: "\f105";
-                    color: var(--black);
+                    color: var(--white);
                     font-family: 'Font Awesome 6 Pro';
                     font-weight: 400;
                 }
@@ -529,7 +532,7 @@ h5 {
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 25px;
     font-weight: 500;
     margin-bottom: 0;
@@ -612,7 +615,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*----------------------------------------------
-end
+Reset end
 ----------------------------------------------*/
 
 
@@ -742,6 +745,21 @@ Offcanvas end
 
 // Responsive shape area end
 // Shape area end
+.number {
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 14px;
+    font-family: var(--heading-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -20px;
+    right: -20px;
+}
 
 .section-header {
     margin-bottom: 50px;
@@ -780,10 +798,10 @@ Offcanvas end
 }
 
 .cmn-btn {
-    background: var(--primary-color);
-    padding: 11px 24px;
+    background: var(--btn-bg1);
+    padding: 7px 20px;
     border-radius: 9999px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--btn-bg1);
     transition: all .3s ease-in-out;
     font-size: 16px;
     color: var(--white);
@@ -795,8 +813,9 @@ Offcanvas end
     font-family: var(--heading-font);
 
     &:hover {
-        color: var(--primary-color);
-        background-color: var(--white);
+        color: var(--white);
+        background-color: var(--btn-bg2);
+        border: 1px solid var(--btn-bg2);
     }
 }
 
@@ -878,15 +897,16 @@ Offcanvas end
     align-items: center;
     justify-content: center;
     font-weight: 500;
-    background: var(--primary-color);
+    background: var(--btn-bg1);
     color: var(--white);
     transition: var(--transition);
     text-transform: capitalize;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--btn-bg1);
 
     &:hover {
-        background-color: var(--white);
-        color: var(--primary-color);
+        background-color: var(--btn-bg2);
+        color: var(--white);
+        border: 1px solid var(--btn-bg2);
     }
 }
 
@@ -1098,15 +1118,17 @@ section {
 }
 
 .section-title {
-    max-width: 500px;
+    max-width: 560px;
 }
 
 .section-subtitle {
     text-transform: capitalize;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--primary-color);
     font-weight: 400;
     margin-bottom: 10px;
+    font-family: 'Kanit', sans-serif;
+
 }
 
 @media (max-width: 991px) {
@@ -1116,15 +1138,15 @@ section {
 }
 
 .social-area ul li a {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 14px;
-    border-radius: 10px;
+    border-radius: 50%;
     background: var(--white);
-    color: var(--heading-color);
+    color: var(--primary-color);
     box-shadow: var(--shadow3);
 
     &:hover {
@@ -1293,7 +1315,7 @@ hr.divider:after {
 }
 
 // noUiSlider section end
-.bg-img{
+.bg-img {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1824,19 +1846,22 @@ Hero end
 ----------------------------------------------*/
 .calculator-section {
     margin-top: -130px;
+
     .calculator {
         background-color: var(--white);
         padding: 30px;
         border-radius: 15px;
         box-shadow: var(--shadow1);
-        .form-text span{
-            &:not(:last-child){
-                margin-right: 15px;    
+
+        .form-text span {
+            &:not(:last-child) {
+                margin-right: 15px;
             }
-            i{
+
+            i {
                 margin-right: 5px;
             }
-            
+
         }
     }
 }
@@ -1896,10 +1921,11 @@ Calculator start
     min-width: 70px;
     height: 70px;
     box-shadow: var(--shadow3);
-    border-radius: 10px;
+    border-radius: 15px;
     color: var(--primary-color);
     padding: 10px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 .text-box {
@@ -1979,12 +2005,11 @@ Feature end
 05. About section start
 ----------------------------------------------*/
 .about-section {
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
+
     .about-thum {
         max-width: 630px;
-        img{
-            border-radius: 10px;
-        }
+        // width: 630px;
     }
 
     .about-content {
@@ -2016,267 +2041,9 @@ About end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-06. Pricing section start
-----------------------------------------------*/
-.pricing-section {
-    background-color: var(--bg-color1);
-
-}
-
-.pricing-box {
-    border-radius: 15px;
-    background: var(--white);
-    box-shadow: var(--shadow2);
-    height: 100%;
-
-    .section-header {
-        background-color: var(--primary-color-opacity-low);
-        padding: 25px 15px;
-        text-align: center;
-        margin-bottom: 0;
-        border-top-right-radius: 15px;
-        border-top-left-radius: 15px;
-
-        .section-title {
-            text-transform: capitalize;
-        }
-
-        .plan-description {
-            font-size: 14px;
-            line-height: 20px;
-            margin-bottom: 0;
-        }
-    }
-
-    .section-body {
-        color: var(--heading-color);
-        padding: 15px;
-
-        .title {
-            text-align: center;
-            font-size: 20px;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .plan-thumbs {
-            width: 75px;
-            margin: auto;
-        }
-
-        .marketing-campaigns {
-            width: 160px;
-        }
-
-        .btn-area {
-            margin: 20px 0 30px;
-
-            .cmn-btn {
-                width: 100%;
-            }
-        }
-
-        .pricing-feature {
-            margin-bottom: 20px;
-
-            li {
-                i {
-                    color: var(--primary-color);
-                    margin-right: 10px;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 50%;
-                    background-color: var(--primary-color-opacity-low);
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 12px;
-
-                }
-
-                .close {
-                    color: var(--soft-red);
-                    background-color: var(--soft-red-opacity-low);
-                }
-            }
-
-            li:not(:last-child) {
-                margin-bottom: 16px;
-            }
-        }
-
-        .btn-area {
-
-            .cmn-btn2 {
-                width: 100%;
-            }
-        }
-    }
-
-    .btn-area {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-.pricing-box.featured {
-    border: 1px solid var(--primary-color);
-    position: relative;
-
-    .featured-title {
-        position: absolute;
-        background: var(--primary-color);
-        top: -17px;
-        padding: 4px 15px;
-        border-radius: 18px;
-        color: var(--white);
-        text-transform: capitalize;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .section-header {
-        border-color: var(--primary-color);
-    }
-}
-
-// Pricing responsive start
-@media (max-width: 1199px) {
-    .prepaid-plan {
-        .prepaid-title {
-            font-size: 20px;
-
-            sup {
-                font-size: 10px;
-            }
-        }
-    }
-}
-
-@media (max-width: 991px) {
-    .prepaid-plan {
-        .price-area {
-            .price-title {
-                font-size: 28px;
-            }
-        }
-
-        sup {
-            font-size: 18px;
-        }
-
-    }
-}
-
-@media (max-width: 767px) {
-    .cmn-tabs .nav-pills {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        .nav-item {
-            width: 100%;
-        }
-    }
-}
-
-// Pricing responsive end
-
-// Pricing rtl start
-.rtl .pricing-box {
-    .section-header {
-        border-right: none;
-        border-left: 1px solid var(--primary-color-opacity-low3);
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 0;
-    }
-
-    .section-body .pricing-feature li i {
-        margin-right: 0;
-        margin-left: 10px;
-    }
-}
-
-// Pricing rtl end
-// ----------------------------------------------------
-/*----------------------------------------------
-Pricing end
-----------------------------------------------*/
-
-
-/*----------------------------------------------
-07. Testimonial section start
-----------------------------------------------*/
-.testimonial-section {
-    .testimonial-box {
-        padding: 20px;
-        background: var(--white);
-        border-radius: 15px;
-        transition: var(--transition);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-    }
-
-    .testimonial-thumbs {
-        img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            filter: grayscale(1);
-        }
-
-        border: 1px transparent;
-    }
-
-    .owl-item.active.center {
-        .testimonial-thumbs {
-            img {
-                width: 110px;
-                height: 110px;
-                border-radius: 50%;
-                filter: grayscale(0);
-            }
-        }
-
-        .testimonial-box {
-            // border: 1px solid var(--primary-color);
-            background-color: var(--bg-color1);
-        }
-    }
-
-    .quote-area {
-        width: 25px;
-        height: 25px;
-
-        &:last-child {
-            display: flex;
-            justify-content: end;
-        }
-    }
-
-    .owl-theme {
-        .owl-nav.disabled+.owl-dots {
-            margin-top: 50px;
-        }
-    }
-}
-
-
-
-
-// Rtl testimonial end
-/*----------------------------------------------
-Testimonial end
-----------------------------------------------*/
-
-/*----------------------------------------------
-08. How it works section start
+06. How it works section start
 ----------------------------------------------*/
 .how-it-work {
-    background-color: var(--bg-color1);
 
     .how-it-work-content {
         .btn-area {
@@ -2310,12 +2077,104 @@ How it works end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+07. Why choose us section start
+----------------------------------------------*/
+.why-choose-us {
+    background-color: var(--bg-color1);
+}
+
+.why-choose-us-thum {
+    max-width: 630px;
+}
+
+.choose-us-list {
+    margin-top: 20px;
+
+    .item {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 5px;
+            width: 30px;
+        }
+    }
+}
+
+/*----------------------------------------------
+07. Why choose us end
+----------------------------------------------*/
+
+/*----------------------------------------------
+07. Testimonial section start
+----------------------------------------------*/
+.testimonial-section {
+    .testimonial-box {
+        padding: 20px;
+        background: var(--white);
+        border-radius: 15px;
+        transition: var(--transition);
+        border: 1px solid var(--border-color1);
+
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+
+            .testimonial-title-area {
+                display: flex;
+            }
+
+            .testimonial-thumbs {
+                margin-right: 10px;
+
+                img {
+                    width: 65px;
+                    height: 65px;
+                    border-radius: 50%;
+                }
+            }
+
+            .qoute-icon {
+                font-size: 35px;
+                color: var(--primary-color);
+            }
+        }
+
+        .quote-area {
+            margin-top: 20px;
+        }
+    }
+
+
+
+    .owl-theme {
+        .owl-nav.disabled+.owl-dots {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+
+
+// Rtl testimonial end
+/*----------------------------------------------
+Testimonial end
+----------------------------------------------*/
+
+
+
+/*----------------------------------------------
 09. Faq section start
 ----------------------------------------------*/
 
 .faq-section {
+    background-color: var(--bg-color1);
 
     .accordion-button {
+        padding-left: 0;
+        padding-right: 0;
         color: var(--heading-color);
         font-weight: 500;
         font-size: 18px;
@@ -2329,6 +2188,11 @@ How it works end
             background: transparent;
             color: var(--primary-color);
         }
+    }
+
+    .accordion-body {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -2350,8 +2214,8 @@ How it works end
 
     &::after {
         background: url(../img/accordion/plus.png);
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         background-color: var(--primary-color);
         background-size: 50%;
         background-repeat: no-repeat;
@@ -2362,8 +2226,8 @@ How it works end
     &:not(.collapsed) {
         &::after {
             background: url(../img/accordion/minus.png);
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             background-color: var(--primary-color);
             background-size: 50%;
             background-repeat: no-repeat;
@@ -2394,48 +2258,70 @@ Faq end
 /*----------------------------------------------
 10. Blog section start
 ----------------------------------------------*/
-.blog-section {
-    background-color: var(--bg-color1);
-}
-
-.pr1-blog-content {
-    margin-top: 30px;
-}
 
 .blog-box {
     background: var(--white);
-    border-radius: 15px;
+    border-radius: 5px;
     box-shadow: var(--shadow3);
+    border: 1px solid var(--border-color1);
+    transition: var(--transition);
 
     &:hover {
+        box-shadow: none;
+
         .img-box {
             overflow: hidden;
 
             img {
-                transform: scale(1);
+                transform: scale(1.1);
             }
         }
     }
 
     .img-box {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
         overflow: hidden;
+        position: relative;
+        border-radius: 5px;
 
         img {
             transition: var(--transition);
-            transform: scale(1.1);
             width: 100%;
             height: 15vw;
             max-height: 250px;
+            border-radius: 5px;
         }
+
+        .date {
+            position: absolute;
+            padding: 5px 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 14px;
+            border-radius: 5px;
+            bottom: 15px;
+            right: 15px;
+        }
+
+
     }
 
     .content-box {
         padding: 20px;
 
-        .cmn-btn i {
-            margin-left: 5px;
+        .blog-btn {
+            color: var(--primary-color);
+            font-size: 18px;
+            font-family: var(--heading-font);
+            margin-top: 15px;
+            display: inline-flex;
+        }
+
+        .para-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
         }
     }
 
@@ -2448,8 +2334,8 @@ Faq end
             margin-right: 10px;
 
             img {
-                width: 30px;
-                height: 30px;
+                width: 35px;
+                height: 35px;
                 border-radius: 50%;
             }
         }
@@ -2458,11 +2344,15 @@ Faq end
             h5 {
                 margin: 0;
             }
+
+            span {
+                font-size: 14px;
+            }
         }
     }
 
     .blog-title {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
@@ -2534,22 +2424,100 @@ Blog end
 
 
 /*----------------------------------------------
-11. Footer section start
+11. Newsletter section start
+----------------------------------------------*/
+.newsletter-section {
+    background-color: var(--bg-color1);
+    background-image: url(../img/background/footer-bg-shape.png);
+
+    .content-area {
+        font-family: var(--heading-font);
+        font-weight: 400;
+        color: var(--heading-color);
+        text-transform: uppercase;
+        line-height: 40px;
+
+        .subscribe-small-text {
+            font-size: 22px;
+        }
+
+        .subscribe-normal-text {
+            font-size: 42px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+    }
+
+    .newsletter-form {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .form-control {
+            border-radius: 9999px;
+            height: 55px;
+            background-color: var(--white);
+            padding: 10px 165px 10px 20px;
+        }
+
+        .subscribe-btn {
+            transition: var(--transition);
+            position: absolute;
+            right: 5px;
+            background-color: var(--btn-bg1);
+            height: 45px;
+            border-radius: 9999px;
+            padding: 10px 40px;
+            color: var(--white);
+            &:hover{
+                background-color: var(--btn-bg2);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+/*----------------------------------------------
+Newsletter end
+----------------------------------------------*/
+
+/*----------------------------------------------
+12. Footer section start
 ----------------------------------------------*/
 
 .footer-section {
-    background: url(../img/background/bg-2.png);
-    background-size: cover;
-    background-position: center;
+    background-color: #111111;
 
     .footer-widget {
-        h5 {
+        .widget-title {
             position: relative;
-            margin-bottom: 30px;
-            font-weight: 500;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            font-weight: 400;
             text-transform: capitalize;
             font-size: 20px;
             font-family: var(--heading-font);
+            color: var(--white);
+
+            &::after {
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                content: "";
+                width: 150px;
+                height: 2px;
+                background-color: rgba(255, 255, 255, 0.15);
+            }
+
+            &::before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 50px;
+                height: 2px;
+                background-color: var(--primary-color);
+            }
         }
 
         input[type=email] {
@@ -2569,7 +2537,8 @@ Blog end
 
 .footer-widget {
     p {
-        font-weight: 400;
+        font-weight: 300;
+        color: rgb(255 255 255 / 80%);
     }
 
     ul {
@@ -2578,12 +2547,24 @@ Blog end
         }
     }
 
-    a {
-        font-weight: 400;
-        color: var(--heading-color);
+    .widget-link {
+        margin-left: 18px;
+        position: relative;
+        font-weight: 300;
+        color: rgb(255 255 255 / 80%);
 
         &:hover {
             color: var(--primary-color);
+        }
+
+        &::before {
+            height: 7px;
+            width: 7px;
+            content: '';
+            left: -17px;
+            top: 6px;
+            position: absolute;
+            background-color: var(--primary-color);
         }
     }
 }
@@ -2607,7 +2588,8 @@ Footer end
 .copyright-area {
     p {
         margin-bottom: 0;
-        font-weight: 400;
+        font-weight: 300;
+        color: rgb(255 255 255 / 80%);
     }
 }
 
@@ -2616,6 +2598,8 @@ Footer end
     justify-content: end;
 
     a {
+        color: rgb(255 255 255 / 80%);
+        font-weight: 300;
 
         &:hover {
             color: var(--primary-color);
@@ -2658,13 +2642,13 @@ Copyright end
 }
 
 .banner-area {
-    padding-top: 150px;
-    padding-bottom: 70px;
+    padding-top: 220px;
+    padding-bottom: 100px;
     position: relative;
     z-index: 1;
-    background: url(../img/background/bg-1.png);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banner/pexels-anete-lusina-6353681.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 100% 75%;
 
     h3 {
         font-size: 40px;
@@ -2674,12 +2658,13 @@ Copyright end
 
 .breadcrumb-area {
     font-size: 18px;
-    color: var(--heading-color);
+    color: var(--white);
     font-weight: 500;
     text-align: center;
 
     h3 {
         text-transform: capitalize;
+        color: var(--white);
     }
 }
 

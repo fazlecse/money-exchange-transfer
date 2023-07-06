@@ -12,7 +12,7 @@ Version       : 1.0
 03. Hero section start
 04. Feature section start
 05. About section start
-06. Pricing section start
+06. How it works section start
 07. Testimonial section start
 08. How it works section start
 09. Faq section start
@@ -32,7 +32,7 @@ Version       : 1.0
 /*----------------------------------------------
 Typography 
 ----------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kanit:wght@300;400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800;900&display=swap");
 :root {
   --body-font: "Inter", sans-serif;
   --heading-font: "Rubik", sans-serif;
@@ -43,6 +43,8 @@ Typography
   --white: #ffffff;
   --soft-blue: #C1BFFD;
   --grayish-violet: #f5f4f7;
+  --btn-bg1: #51B6BB;
+  --btn-bg2: #3b99a2;
   --soft-green: #ccf888;
   --soft-red: #FE5758;
   --soft-red: #d82a68;
@@ -52,7 +54,7 @@ Typography
   --input-color: #FAFAFA;
   --primary-color-opacity-low: rgb(51, 104, 250, 0.1);
   --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
-  --bg-color1: #FCF2EC;
+  --bg-color1: #52b7bc1a;
   --bg-color2: #F1F3F4;
   --bg-color3: #152748;
   --bg-color4: #424449;
@@ -386,7 +388,7 @@ Breadcrumb start
 }
 .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   content: "\f105";
-  color: var(--black);
+  color: var(--white);
   font-family: "Font Awesome 6 Pro";
   font-weight: 400;
 }
@@ -487,7 +489,7 @@ h5 {
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 25px;
   font-weight: 500;
   margin-bottom: 0;
@@ -569,7 +571,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*----------------------------------------------
-end
+Reset end
 ----------------------------------------------*/
 /*----------------------------------------------
 Reuseble style section start
@@ -674,6 +676,22 @@ Offcanvas end
     right: -7px;
   }
 }
+.number {
+  position: absolute;
+  background-color: var(--primary-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 14px;
+  font-family: var(--heading-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -20px;
+  right: -20px;
+}
+
 .section-header {
   margin-bottom: 50px;
 }
@@ -710,10 +728,10 @@ Offcanvas end
 }
 
 .cmn-btn {
-  background: var(--primary-color);
-  padding: 11px 24px;
+  background: var(--btn-bg1);
+  padding: 7px 20px;
   border-radius: 9999px;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--btn-bg1);
   transition: all 0.3s ease-in-out;
   font-size: 16px;
   color: var(--white);
@@ -725,8 +743,9 @@ Offcanvas end
   font-family: var(--heading-font);
 }
 .cmn-btn:hover {
-  color: var(--primary-color);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--btn-bg2);
+  border: 1px solid var(--btn-bg2);
 }
 
 .cmn-btn2 {
@@ -798,15 +817,16 @@ Offcanvas end
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  background: var(--primary-color);
+  background: var(--btn-bg1);
   color: var(--white);
   transition: var(--transition);
   text-transform: capitalize;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--btn-bg1);
 }
 .get-start-btn:hover {
-  background-color: var(--white);
-  color: var(--primary-color);
+  background-color: var(--btn-bg2);
+  color: var(--white);
+  border: 1px solid var(--btn-bg2);
 }
 
 /*----------------------------------------------
@@ -981,15 +1001,16 @@ section {
 }
 
 .section-title {
-  max-width: 500px;
+  max-width: 560px;
 }
 
 .section-subtitle {
   text-transform: capitalize;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--primary-color);
   font-weight: 400;
   margin-bottom: 10px;
+  font-family: "Kanit", sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -998,15 +1019,15 @@ section {
   }
 }
 .social-area ul li a {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 14px;
-  border-radius: 10px;
+  border-radius: 50%;
   background: var(--white);
-  color: var(--heading-color);
+  color: var(--primary-color);
   box-shadow: var(--shadow3);
 }
 .social-area ul li a:hover {
@@ -1674,10 +1695,11 @@ Calculator start
   min-width: 70px;
   height: 70px;
   box-shadow: var(--shadow3);
-  border-radius: 10px;
+  border-radius: 15px;
   color: var(--primary-color);
   padding: 10px;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .text-box .highlight {
@@ -1735,13 +1757,10 @@ Feature end
 05. About section start
 ----------------------------------------------*/
 .about-section {
-  background-color: var(--bg-color2);
+  background-color: var(--bg-color1);
 }
 .about-section .about-thum {
   max-width: 630px;
-}
-.about-section .about-thum img {
-  border-radius: 10px;
 }
 .about-section .about-content .btn-area {
   margin-top: 30px;
@@ -1760,198 +1779,8 @@ Feature end
 About end
 ----------------------------------------------*/
 /*----------------------------------------------
-06. Pricing section start
+06. How it works section start
 ----------------------------------------------*/
-.pricing-section {
-  background-color: var(--bg-color1);
-}
-
-.pricing-box {
-  border-radius: 15px;
-  background: var(--white);
-  box-shadow: var(--shadow2);
-  height: 100%;
-}
-.pricing-box .section-header {
-  background-color: var(--primary-color-opacity-low);
-  padding: 25px 15px;
-  text-align: center;
-  margin-bottom: 0;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-}
-.pricing-box .section-header .section-title {
-  text-transform: capitalize;
-}
-.pricing-box .section-header .plan-description {
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 0;
-}
-.pricing-box .section-body {
-  color: var(--heading-color);
-  padding: 15px;
-}
-.pricing-box .section-body .title {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-.pricing-box .section-body .plan-thumbs {
-  width: 75px;
-  margin: auto;
-}
-.pricing-box .section-body .marketing-campaigns {
-  width: 160px;
-}
-.pricing-box .section-body .btn-area {
-  margin: 20px 0 30px;
-}
-.pricing-box .section-body .btn-area .cmn-btn {
-  width: 100%;
-}
-.pricing-box .section-body .pricing-feature {
-  margin-bottom: 20px;
-}
-.pricing-box .section-body .pricing-feature li i {
-  color: var(--primary-color);
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: var(--primary-color-opacity-low);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-}
-.pricing-box .section-body .pricing-feature li .close {
-  color: var(--soft-red);
-  background-color: var(--soft-red-opacity-low);
-}
-.pricing-box .section-body .pricing-feature li:not(:last-child) {
-  margin-bottom: 16px;
-}
-.pricing-box .section-body .btn-area .cmn-btn2 {
-  width: 100%;
-}
-.pricing-box .btn-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.pricing-box.featured {
-  border: 1px solid var(--primary-color);
-  position: relative;
-}
-.pricing-box.featured .featured-title {
-  position: absolute;
-  background: var(--primary-color);
-  top: -17px;
-  padding: 4px 15px;
-  border-radius: 18px;
-  color: var(--white);
-  text-transform: capitalize;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.pricing-box.featured .section-header {
-  border-color: var(--primary-color);
-}
-
-@media (max-width: 1199px) {
-  .prepaid-plan .prepaid-title {
-    font-size: 20px;
-  }
-  .prepaid-plan .prepaid-title sup {
-    font-size: 10px;
-  }
-}
-@media (max-width: 991px) {
-  .prepaid-plan .price-area .price-title {
-    font-size: 28px;
-  }
-  .prepaid-plan sup {
-    font-size: 18px;
-  }
-}
-@media (max-width: 767px) {
-  .cmn-tabs .nav-pills {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .cmn-tabs .nav-pills .nav-item {
-    width: 100%;
-  }
-}
-.rtl .pricing-box .section-header {
-  border-right: none;
-  border-left: 1px solid var(--primary-color-opacity-low3);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 0;
-}
-.rtl .pricing-box .section-body .pricing-feature li i {
-  margin-right: 0;
-  margin-left: 10px;
-}
-
-/*----------------------------------------------
-Pricing end
-----------------------------------------------*/
-/*----------------------------------------------
-07. Testimonial section start
-----------------------------------------------*/
-.testimonial-section .testimonial-box {
-  padding: 20px;
-  background: var(--white);
-  border-radius: 15px;
-  transition: var(--transition);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.testimonial-section .testimonial-thumbs {
-  border: 1px transparent;
-}
-.testimonial-section .testimonial-thumbs img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  filter: grayscale(1);
-}
-.testimonial-section .owl-item.active.center .testimonial-thumbs img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  filter: grayscale(0);
-}
-.testimonial-section .owl-item.active.center .testimonial-box {
-  background-color: var(--bg-color1);
-}
-.testimonial-section .quote-area {
-  width: 25px;
-  height: 25px;
-}
-.testimonial-section .quote-area:last-child {
-  display: flex;
-  justify-content: end;
-}
-.testimonial-section .owl-theme .owl-nav.disabled + .owl-dots {
-  margin-top: 50px;
-}
-
-/*----------------------------------------------
-Testimonial end
-----------------------------------------------*/
-/*----------------------------------------------
-08. How it works section start
-----------------------------------------------*/
-.how-it-work {
-  background-color: var(--bg-color1);
-}
 .how-it-work .how-it-work-content .btn-area {
   margin-top: 30px;
 }
@@ -1971,9 +1800,80 @@ Testimonial end
 How it works end
 ----------------------------------------------*/
 /*----------------------------------------------
+07. Why choose us section start
+----------------------------------------------*/
+.why-choose-us {
+  background-color: var(--bg-color1);
+}
+
+.why-choose-us-thum {
+  max-width: 630px;
+}
+
+.choose-us-list {
+  margin-top: 20px;
+}
+.choose-us-list .item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.choose-us-list .item img {
+  margin-right: 5px;
+  width: 30px;
+}
+
+/*----------------------------------------------
+07. Why choose us end
+----------------------------------------------*/
+/*----------------------------------------------
+07. Testimonial section start
+----------------------------------------------*/
+.testimonial-section .testimonial-box {
+  padding: 20px;
+  background: var(--white);
+  border-radius: 15px;
+  transition: var(--transition);
+  border: 1px solid var(--border-color1);
+}
+.testimonial-section .testimonial-box .testimonial-header {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonial-section .testimonial-box .testimonial-header .testimonial-title-area {
+  display: flex;
+}
+.testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs {
+  margin-right: 10px;
+}
+.testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.testimonial-section .testimonial-box .testimonial-header .qoute-icon {
+  font-size: 35px;
+  color: var(--primary-color);
+}
+.testimonial-section .testimonial-box .quote-area {
+  margin-top: 20px;
+}
+.testimonial-section .owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 30px;
+}
+
+/*----------------------------------------------
+Testimonial end
+----------------------------------------------*/
+/*----------------------------------------------
 09. Faq section start
 ----------------------------------------------*/
+.faq-section {
+  background-color: var(--bg-color1);
+}
 .faq-section .accordion-button {
+  padding-left: 0;
+  padding-right: 0;
   color: var(--heading-color);
   font-weight: 500;
   font-size: 18px;
@@ -1985,6 +1885,10 @@ How it works end
   box-shadow: none;
   background: transparent;
   color: var(--primary-color);
+}
+.faq-section .accordion-body {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .accordion-item {
@@ -2002,8 +1906,8 @@ How it works end
 }
 .accordion-button::after {
   background: url(../img/accordion/plus.png);
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-color: var(--primary-color);
   background-size: 50%;
   background-repeat: no-repeat;
@@ -2012,8 +1916,8 @@ How it works end
 }
 .accordion-button:not(.collapsed)::after {
   background: url(../img/accordion/minus.png);
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-color: var(--primary-color);
   background-size: 50%;
   background-repeat: no-repeat;
@@ -2036,42 +1940,60 @@ Faq end
 /*----------------------------------------------
 10. Blog section start
 ----------------------------------------------*/
-.blog-section {
-  background-color: var(--bg-color1);
-}
-
-.pr1-blog-content {
-  margin-top: 30px;
-}
-
 .blog-box {
   background: var(--white);
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: var(--shadow3);
+  border: 1px solid var(--border-color1);
+  transition: var(--transition);
+}
+.blog-box:hover {
+  box-shadow: none;
 }
 .blog-box:hover .img-box {
   overflow: hidden;
 }
 .blog-box:hover .img-box img {
-  transform: scale(1);
+  transform: scale(1.1);
 }
 .blog-box .img-box {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
   overflow: hidden;
+  position: relative;
+  border-radius: 5px;
 }
 .blog-box .img-box img {
   transition: var(--transition);
-  transform: scale(1.1);
   width: 100%;
   height: 15vw;
   max-height: 250px;
+  border-radius: 5px;
+}
+.blog-box .img-box .date {
+  position: absolute;
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 5px;
+  bottom: 15px;
+  right: 15px;
 }
 .blog-box .content-box {
   padding: 20px;
 }
-.blog-box .content-box .cmn-btn i {
-  margin-left: 5px;
+.blog-box .content-box .blog-btn {
+  color: var(--primary-color);
+  font-size: 18px;
+  font-family: var(--heading-font);
+  margin-top: 15px;
+  display: inline-flex;
+}
+.blog-box .content-box .para-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
 }
 .blog-box .blog-author {
   display: inline-flex;
@@ -2082,15 +2004,18 @@ Faq end
   margin-right: 10px;
 }
 .blog-box .blog-author .author-img img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
 }
 .blog-box .blog-author .author-info h5 {
   margin: 0;
 }
+.blog-box .blog-author .author-info span {
+  font-size: 14px;
+}
 .blog-box .blog-title {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
@@ -2133,20 +2058,89 @@ Faq end
 Blog end
 ----------------------------------------------*/
 /*----------------------------------------------
-11. Footer section start
+11. Newsletter section start
+----------------------------------------------*/
+.newsletter-section {
+  background-color: var(--bg-color1);
+  background-image: url(../img/background/footer-bg-shape.png);
+}
+.newsletter-section .content-area {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  line-height: 40px;
+}
+.newsletter-section .content-area .subscribe-small-text {
+  font-size: 22px;
+}
+.newsletter-section .content-area .subscribe-normal-text {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.newsletter-section .newsletter-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.newsletter-section .newsletter-form .form-control {
+  border-radius: 9999px;
+  height: 55px;
+  background-color: var(--white);
+  padding: 10px 165px 10px 20px;
+}
+.newsletter-section .newsletter-form .subscribe-btn {
+  transition: var(--transition);
+  position: absolute;
+  right: 5px;
+  background-color: var(--btn-bg1);
+  height: 45px;
+  border-radius: 9999px;
+  padding: 10px 40px;
+  color: var(--white);
+}
+.newsletter-section .newsletter-form .subscribe-btn:hover {
+  background-color: var(--btn-bg2);
+  color: var(--white);
+}
+
+/*----------------------------------------------
+Newsletter end
+----------------------------------------------*/
+/*----------------------------------------------
+12. Footer section start
 ----------------------------------------------*/
 .footer-section {
-  background: url(../img/background/bg-2.png);
-  background-size: cover;
-  background-position: center;
+  background-color: #111111;
 }
-.footer-section .footer-widget h5 {
+.footer-section .footer-widget .widget-title {
   position: relative;
-  margin-bottom: 30px;
-  font-weight: 500;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-weight: 400;
   text-transform: capitalize;
   font-size: 20px;
   font-family: var(--heading-font);
+  color: var(--white);
+}
+.footer-section .footer-widget .widget-title::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.footer-section .footer-widget .widget-title::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary-color);
 }
 .footer-section .footer-widget input[type=email] {
   margin: 30px 0 20px 0;
@@ -2161,17 +2155,29 @@ Blog end
 }
 
 .footer-widget p {
-  font-weight: 400;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
 }
 .footer-widget ul li {
   line-height: 2.5;
 }
-.footer-widget a {
-  font-weight: 400;
-  color: var(--heading-color);
+.footer-widget .widget-link {
+  margin-left: 18px;
+  position: relative;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
 }
-.footer-widget a:hover {
+.footer-widget .widget-link:hover {
   color: var(--primary-color);
+}
+.footer-widget .widget-link::before {
+  height: 7px;
+  width: 7px;
+  content: "";
+  left: -17px;
+  top: 6px;
+  position: absolute;
+  background-color: var(--primary-color);
 }
 
 .rtl .footer-section .footer-widget h5::after {
@@ -2187,12 +2193,17 @@ Footer end
 ----------------------------------------------*/
 .copyright-area p {
   margin-bottom: 0;
-  font-weight: 400;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .language {
   display: flex;
   justify-content: end;
+}
+.language a {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
 }
 .language a:hover {
   color: var(--primary-color);
@@ -2225,13 +2236,13 @@ Copyright end
 }
 
 .banner-area {
-  padding-top: 150px;
-  padding-bottom: 70px;
+  padding-top: 220px;
+  padding-bottom: 100px;
   position: relative;
   z-index: 1;
-  background: url(../img/background/bg-1.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banner/pexels-anete-lusina-6353681.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 100% 75%;
 }
 .banner-area h3 {
   font-size: 40px;
@@ -2240,12 +2251,13 @@ Copyright end
 
 .breadcrumb-area {
   font-size: 18px;
-  color: var(--heading-color);
+  color: var(--white);
   font-weight: 500;
   text-align: center;
 }
 .breadcrumb-area h3 {
   text-transform: capitalize;
+  color: var(--white);
 }
 
 @media (max-width: 991px) {
