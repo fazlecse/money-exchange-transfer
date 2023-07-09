@@ -263,10 +263,10 @@ passwordIcon.addEventListener("click", function () {
 })
 // input field show hide password end
 
-// Int Tel Input With Flags and Dial Codes start
+// International Telephone Input start
 const input = document.querySelector("#telephone");
 window.intlTelInput(input, {
     initialCountry: "bd",
     separateDialCode: true,
 });
-// Int Tel Input With Flags and Dial Codes end
+// International Telephone Input end
