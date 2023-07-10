@@ -37,20 +37,21 @@ Version       : 1.0
 /*----------------------------------------------
 Typography 
 ----------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Kanit:wght@300;400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Jost:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-    --body-font: 'Inter', sans-serif;
-    --heading-font: 'Rubik', sans-serif;
+    --body-font: 'Jost', sans-serif;
+    --heading-font: 'Jost', sans-serif;
     --primary-color: #51B6BB;
+    --primary-color: #009868;
     --heading-color: #26282C;
     --black: #26282C;
     --grayish-blue: #929cbf;
     --white: #ffffff;
     --soft-blue: #C1BFFD;
     --grayish-violet: #f5f4f7;
-    --btn-bg1: #51B6BB;
-    --btn-bg2: #3b99a2;
+    --btn-bg1: #009868;
+    --btn-bg2: #007f57;
     --soft-green: #ccf888;
     --soft-red: #FE5758;
     --soft-red: #d82a68;
@@ -58,10 +59,10 @@ Typography
     --vivid-orange: #fb6116;
     --yellow: #fcc013;
     --input-color: #FAFAFA;
-    --primary-color-opacity-low: rgb(51, 104, 250, 0.1);
+    --primary-color-opacity-low: rgba(0, 153, 105, 0.1);
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
     // --bg-color1: #FCF2EC;
-    --bg-color1: #52b7bc1a;
+    --bg-color1: rgba(0, 153, 105, 0.1);
     --bg-color2: #F1F3F4;
     --bg-color3: #152748;
     --bg-color4: #424449;
@@ -102,7 +103,7 @@ preloader section start
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: var(--white);
+    background: var(--black);
     z-index: 99999;
     display: flex;
     align-items: center;
@@ -114,6 +115,7 @@ preloader section start
         display: flex;
         justify-content: center;
         align-items: center;
+
         .ring {
             position: relative;
             width: 150px;
@@ -123,6 +125,7 @@ preloader section start
             border-radius: 50%;
             border-top: 4px solid #24ecff;
             animation: animate 4s linear infinite;
+
             &::before {
                 content: '';
                 position: absolute;
@@ -133,16 +136,18 @@ preloader section start
                 height: 15px;
                 background: #24ecff;
                 box-shadow: 0 0 0 5px #24ecff33,
-                0 0 0 10px #24ecff22,
-                0 0 0 20px #24ecff11,
-                0 0 20px #24ecff,
-                0 0 50px #24ecff;
+                    0 0 0 10px #24ecff22,
+                    0 0 0 20px #24ecff11,
+                    0 0 20px #24ecff,
+                    0 0 50px #24ecff;
             }
+
             &:nth-child(2) {
                 animation: animate2 4s linear infinite;
                 animation-delay: -1s;
                 border-left: 4px solid #93ff2d;
                 border-top: 4px solid transparent;
+
                 &::before {
                     content: '';
                     position: absolute;
@@ -154,12 +159,13 @@ preloader section start
                     height: 15px;
                     background: #93ff2d;
                     box-shadow: 0 0 0 5px #93ff2d33,
-                    0 0 0 10px #93ff2d22,
-                    0 0 0 20px #93ff2d11,
-                    0 0 20px #93ff2d,
-                    0 0 50px #93ff2d;
+                        0 0 0 10px #93ff2d22,
+                        0 0 0 20px #93ff2d11,
+                        0 0 20px #93ff2d,
+                        0 0 50px #93ff2d;
                 }
             }
+
             &:nth-child(3) {
                 animation: animate2 4s linear infinite;
                 animation-delay: -3s;
@@ -167,6 +173,7 @@ preloader section start
                 top: -66.66px;
                 border-top: 4px solid transparent;
                 border-left: 4px solid #e41cf8;
+
                 &::before {
                     content: '';
                     position: absolute;
@@ -178,39 +185,44 @@ preloader section start
                     height: 15px;
                     background: #e41cf8;
                     box-shadow: 0 0 0 5px #e41cf833,
-                    0 0 0 10px #e41cf822,
-                    0 0 0 20px #e41cf811,
-                    0 0 20px #e41cf8,
-                    0 0 50px #e41cf8;
+                        0 0 0 10px #e41cf822,
+                        0 0 0 20px #e41cf811,
+                        0 0 20px #e41cf8,
+                        0 0 50px #e41cf8;
                 }
             }
         }
+
         p {
             position: absolute;
             color: #fff;
             font-size: 1.5em;
             font-family: consolas;
-            bottom: -80px;
+            bottom: -120px;
             letter-spacing: 0.15em;
         }
     }
+
     @keyframes animate {
         0% {
             transform: rotate(0deg);
         }
+
         100% {
             transform: rotate(360deg);
         }
     }
+
     @keyframes animate2 {
         0% {
             transform: rotate(360deg);
         }
+
         100% {
             transform: rotate(0deg);
         }
     }
-    
+
 
 }
 
@@ -412,7 +424,13 @@ intlTelInput section start
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 10px;
     }
-    .iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text]{
+
+    .iti--allow-dropdown input,
+    .iti--allow-dropdown input[type=tel],
+    .iti--allow-dropdown input[type=text],
+    .iti--separate-dial-code input,
+    .iti--separate-dial-code input[type=tel],
+    .iti--separate-dial-code input[type=text] {
         padding-left: 6px !important;
         padding-right: 96px;
     }
@@ -962,8 +980,8 @@ Offcanvas end
 
 .cmn-btn {
     background: var(--btn-bg1);
-    padding: 7px 20px;
-    border-radius: 9999px;
+    padding: 12px 20px;
+    border-radius: 5px;
     border: 1px solid var(--btn-bg1);
     transition: all .3s ease-in-out;
     font-size: 16px;
@@ -978,7 +996,6 @@ Offcanvas end
     &:hover {
         color: var(--white);
         background-color: var(--btn-bg2);
-        border: 1px solid var(--btn-bg2);
     }
 }
 
@@ -1053,8 +1070,8 @@ Offcanvas end
 }
 
 .get-start-btn {
-    padding: 5px 15px;
-    border-radius: 9999px;
+    padding: 12px 20px;
+    border-radius: 5px;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -1765,18 +1782,11 @@ Padding bottom
     background-color: var(--white);
     box-shadow: var(--shadow2);
     z-index: 999;
-    padding: 15px;
-
-    .custom-nav {
-        padding: 0;
+    padding: 20px 0;
+    .navbar-nav .nav-link{
+        color: var(--heading-color);
     }
-}
 
-.custom-nav {
-    padding: 20px;
-    background-color: var(--white);
-    transition: var(--transition);
-    border-radius: 15px;
 }
 
 .navbar {
@@ -1817,11 +1827,11 @@ Padding bottom
         .nav-link {
             font-size: 16px;
             font-weight: 500;
-            color: var(--heading-color);
+            color: var(--white);
             text-transform: capitalize;
-            padding: 5px 15px;
+            padding: 12px 15px;
             transition: var(--transition);
-            border-radius: 9999px;
+            border-radius: 5px;
 
             &:hover,
             &.active {
@@ -1940,21 +1950,26 @@ Bottom Mobile, Tab nav end
 03. Hero section start
 ----------------------------------------------*/
 .hero-section {
-    background-color: var(--bg-color1);
+    // background-image: url(../img/hero/mid-img-2.jpg);
+    background-image: linear-gradient(rgba(2, 26, 46, 0.6), rgba(2, 25, 44, 0.6)),url(../img/hero/pexels-anete-lusina-6353681.jpg);
     padding: 200px 0;
+    background-size: cover;
+    background-position: center;
 
     .hero-content {
-        text-align: center;
-
+        color: var(--white);
         .hero-title {
+            color: var(--white);
             max-width: 1100px;
             margin: auto;
+            text-transform: capitalize;
         }
 
         .hero-description {
             margin: 30px auto;
             font-size: 18px;
             max-width: 1150px;
+            color: var(--white);
         }
     }
 
@@ -1970,13 +1985,12 @@ Bottom Mobile, Tab nav end
 
     .hero-section {
         padding: 130px 0 160px;
+        text-align: center;
     }
 }
 
 @media (max-width: 767px) {
-    .hero-section {
-        text-align: center;
-    }
+  
 
 
 }
@@ -1989,15 +2003,15 @@ Hero end
 /*----------------------------------------------
 04. Calculator section start
 ----------------------------------------------*/
-.calculator-section {
-    margin-top: -130px;
-}
 
 .calculator {
     background-color: var(--white);
     padding: 30px;
     border-radius: 15px;
     box-shadow: var(--shadow1);
+    .calculator-header{
+        margin-bottom: 20px;
+    }
 
 
     .form-description {
@@ -2066,6 +2080,21 @@ Hero end
 }
 
 // Responsive calculator section start 
+@media (max-width: 1399px){
+    .input-box {
+        .form-control {
+            padding-right: 155px;
+        }
+
+        span.select2.select2-container.select2-container--default {
+            max-width: 150px;
+
+            .select2-selection--single {
+                width: 150px;
+            }
+        }
+    }
+}
 @media (max-width: 1199px) {
     .calculator .form-description .single-description {
         display: block;
@@ -2505,7 +2534,7 @@ Faq end
             color: var(--primary-color);
             font-size: 18px;
             font-family: var(--heading-font);
-            margin-top: 15px;
+            margin-top: 30px;
             display: inline-flex;
         }
 
@@ -2545,7 +2574,7 @@ Faq end
     }
 
     .blog-title {
-        margin-bottom: 10px;
+        margin-bottom: 25px;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
@@ -2953,7 +2982,7 @@ Copyright end
     padding-bottom: 100px;
     position: relative;
     z-index: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banner/pexels-anete-lusina-6353681.jpg);
+    background: linear-gradient(rgba(2, 26, 46, 0.6), rgba(2, 25, 44, 0.6)), url(../img/banner/pexels-anete-lusina-6353681.jpg);
     background-size: cover;
     background-position: 100% 75%;
 

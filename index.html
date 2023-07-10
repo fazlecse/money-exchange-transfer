@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bmail Template</title>
+    <title>TransQuick</title>
     <!-- Favicon-link -->
     <link rel="shortcut icon" href="assets/img/logo/stopwatch.png" type="image/x-icon">
 
@@ -34,13 +34,18 @@
 
     <!-- Preloader section start -->
     <div id="preloader">
-        <div class="loader"></div>
+        <div class="loader">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <p>Loading...</p>
+        </div>
     </div>
     <!-- Preloader section end -->
 
     <!-- Nav section start -->
     <nav class="navbar fixed-top navbar-expand-lg">
-        <div class="container custom-nav">
+        <div class="container">
             <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
@@ -81,7 +86,7 @@
                                         class="fa-solid fa-right-to-bracket"></i>Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="get-start-btn" href="signup.html">register</a>
+                                <a class="get-start-btn" href="signup.html">register now</a>
                             </li>
                         </ul>
                     </form>
@@ -116,87 +121,99 @@
     <!-- Hero section start -->
     <div class="hero-section">
         <div class="container">
-            <div class="row">
-                <div class="hero-content">
-                    <h1 class="hero-title">An affordable, rapid method for international money transfer currency</h1>
-                    <p class="hero-description">Efficient, adaptable, and safe international money transfer worldwide.
-                        Save both time and funds when you make international transfers through us</p>
-                    <div class="btn-area">
-                        <!-- <a href="" class="cmn-btn">send money now</a> -->
-                        <a href="" class="cmn-btn2">open an account</a>
+            <div class="row g-5 justify-content-between align-items-center">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Easiest & Simple
+                            Global Money Transfer.</h1>
+                        <p class="hero-description">Efficient, adaptable, and safe international money transfer
+                            worldwide.
+                            Save both time and funds when you make international transfers through us</p>
+                        <div class="btn-area">
+                            <a href="" class="cmn-btn">open an account</a>
 
+                        </div>
                     </div>
                 </div>
+                <div class="col-xl-5 col-lg-6">
+                    <div class="calculator-section">
+                        <div class="container">
+                            <div class="calculator">
+                                <div class="calculator-header">
+                                    <h4>Send Your Mony Here!</h4>
+                                    <p>Fast and reliable international mony transfer app.</p>
+                                </div>
+                                <form class="text-start">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="send" class="form-label">You send exactly</label>
+                                            <div class="input-box">
+                                                <input type="email" class="form-control" id="send" />
+                                                <select class="cmn-select2" name="state">
+                                                    <option value="gb">GBP</option>
+                                                    <option value="bd">bdt</option>
+                                                    <option value="us">usd</option>
+                                                    <option value="in">INR</option>
+                                                    <option value="ca">CAD</option>
+                                                    <option value="af">AFN</option>
+                                                    <option value="al">ALL</option>
+                                                    <option value="eu">EUR</option>
+                                                    <option value="tr">TRY</option>
+                                                    <option value="id">IDR</option>
+                                                    <option value="SG">SGD</option>
+                                                    <option value="JP">JPY</option>
+                                                    <option value="KR">KRW</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-description">
+                                                <span class="single-description"> <i
+                                                        class="fa-regular fa-arrow-right-arrow-left"></i>
+                                                    Wire Transfer fee: <strong>4.6 USD</strong> </span>
+                                                <span class="single-description"> <i class="fa-light fa-wallet"></i>
+                                                    Total amount we'll
+                                                    convert: <strong>1548.5 USD</strong> </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="receive" class="form-label">Recipients gets</label>
+                                            <div class="input-box">
+                                                <input type="email" class="form-control" id="receive" />
+                                                <select class="cmn-select2" name="state">
+                                                    <option value="bd">BDT</option>
+                                                    <option value="gb">GBP</option>
+                                                    <option value="us">usd</option>
+                                                    <option value="in">INR</option>
+                                                    <option value="ca">CAD</option>
+                                                    <option value="af">AFN</option>
+                                                    <option value="al">ALL</option>
+                                                    <option value="eu">EUR</option>
+                                                    <option value="tr">TRY</option>
+                                                    <option value="id">IDR</option>
+                                                    <option value="SG">SGD</option>
+                                                    <option value="JP">JPY</option>
+                                                    <option value="KR">KRW</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-description">
+                                                <span class="single-description"> <i
+                                                        class="fa-regular fa-clock"></i>should arrive:
+                                                    <strong>Tuesday</strong> </span>
+                                            </div>
+                                        </div>
+                                        <div class="btn-area">
+                                            <a href="" class="cmn-btn">get started</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <!-- Hero section end -->
-
-    <!-- Calculator section start -->
-    <div class="calculator-section">
-        <div class="container">
-            <div class="calculator">
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="send" class="form-label">You send exactly</label>
-                            <div class="input-box">
-                                <input type="email" class="form-control" id="send" />
-                                <select class="cmn-select2" name="state">
-                                    <option value="gb">GBP</option>
-                                    <option value="bd">bdt</option>
-                                    <option value="us">usd</option>
-                                    <option value="in">INR</option>
-                                    <option value="ca">CAD</option>
-                                    <option value="af">AFN</option>
-                                    <option value="al">ALL</option>
-                                    <option value="eu">EUR</option>
-                                    <option value="tr">TRY</option>
-                                    <option value="id">IDR</option>
-                                    <option value="SG">SGD</option>
-                                    <option value="JP">JPY</option>
-                                    <option value="KR">KRW</option>
-                                </select>
-                            </div>
-                            <div class="form-description">
-                                <span class="single-description"> <i class="fa-regular fa-arrow-right-arrow-left"></i> Wire Transfer fee: <strong>4.6 USD</strong> </span>
-                                <span class="single-description"> <i class="fa-light fa-wallet"></i> Total amount we'll convert: <strong>1548.5 USD</strong> </span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="receive" class="form-label">Recipients gets</label>
-                            <div class="input-box">
-                                <input type="email" class="form-control" id="receive" />
-                                <select class="cmn-select2" name="state">
-                                    <option value="bd">BDT</option>
-                                    <option value="gb">GBP</option>
-                                    <option value="us">usd</option>
-                                    <option value="in">INR</option>
-                                    <option value="ca">CAD</option>
-                                    <option value="af">AFN</option>
-                                    <option value="al">ALL</option>
-                                    <option value="eu">EUR</option>
-                                    <option value="tr">TRY</option>
-                                    <option value="id">IDR</option>
-                                    <option value="SG">SGD</option>
-                                    <option value="JP">JPY</option>
-                                    <option value="KR">KRW</option>
-                                </select>
-                            </div>
-                            <div class="form-description">
-                                <span class="single-description"> <i class="fa-regular fa-clock"></i>should arrive: <strong>Tuesday</strong> </span>
-                            </div>
-                        </div>
-                        <div class="btn-area">
-                            <a href="" class="cmn-btn">get started</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Calculator section end -->
 
     <!-- Feature section start -->
     <section class="feature-section">
