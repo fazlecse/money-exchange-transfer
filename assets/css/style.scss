@@ -42,7 +42,7 @@ Typography
 :root {
     --body-font: 'Jost', sans-serif;
     --heading-font: 'Jost', sans-serif;
-    --primary-color: #51B6BB;
+    // --primary-color: #51B6BB;
     --primary-color: #009868;
     --heading-color: #26282C;
     --black: #26282C;
@@ -61,7 +61,6 @@ Typography
     --input-color: #FAFAFA;
     --primary-color-opacity-low: rgba(0, 153, 105, 0.1);
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
-    // --bg-color1: #FCF2EC;
     --bg-color1: rgba(0, 153, 105, 0.1);
     --bg-color2: #F1F3F4;
     --bg-color3: #152748;
@@ -88,12 +87,12 @@ Reset section start
 
 ::-moz-selection {
     color: #fff;
-    background: #3368fa;
+    background: #009868;
 }
 
 ::selection {
     color: #fff;
-    background: #3368fa;
+    background: #009868;
 }
 
 /*----------------------------------------------
@@ -1790,9 +1789,10 @@ Padding bottom
 }
 
 .navbar {
-    transition: all 0.5s ease-in-out;
+    transition: var(--transition);
     padding: 20px;
     z-index: 9999;
+    
 
     .navbar-toggler {
         background: var(--primary-color);
