@@ -442,8 +442,7 @@
                                     </td>
                                     <td data-label="Action">
                                         <div class="dropdown">
-                                            <button class="" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
+                                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
                                             </button>
                                             <ul class="dropdown-menu">
@@ -477,8 +476,7 @@
                                     </td>
                                     <td data-label="Action">
                                         <div class="dropdown">
-                                            <button class="" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
+                                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="fa-regular fa-ellipsis-stroke-vertical"></i>
                                             </button>
                                             <ul class="dropdown-menu">
@@ -633,96 +631,39 @@
         </div>
         <!-- Cmn table section end -->
 
-        <!-- Transections section start -->
-        <div class="transections-section mt-50">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">send money</div>
-                        </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="row g-4">
-                                    <div class="col-12">
-                                        <div>
-                                            <label for="Recipient-email-or-username" class="form-label">Recipient email
-                                                or username </label>
-                                            <input type="text" class="form-control" id="Recipient-email-or-username">
-                                            <div class="form-text">User found. Are you looking for Lucky
-                                                Imuesili?</div>
+        <!-- pagination section start -->
 
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <label for="currency" class="form-label">currency</label>
-                                            <input type="text" class="form-control" id="currency">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <label for="Amount" class="form-label">Amount</label>
-                                            <input type="text" class="form-control" id="Amount">
-                                            <div class="form-text">Remaining balance: 342342.14</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch"
-                                                id="flexSwitchCheckDefault2">
-                                            <label class="form-check-label" for="flexSwitchCheckDefault2">Receiver will
-                                                pay the txt charge</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div>
-                                            <label for="exampleFormControlTextarea1" class="form-label">Note</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                rows="2"></textarea>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="btn-area">
-                                        <button type="submit" class="cmn-btn w-100">send money</button>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="section-header">
-                        <h5>Transection Details</h5>
-                    </div>
-                    <ul class="list-area">
-                        <li><span>Available balance</span> <span>2544.14 USD</span></li>
-                        <li><span>Transfer charge</span> <span>0.15 + 1 = 1.15 USD</span></li>
-                        <li><span>payable amount</span> <span>14.15 USD</span></li>
-                        <li><span>receiver will receive</span> <span>10 USD</span></li>
-                        <li><span>remeining balance</span> <span>55456.11 USD</span></li>
-                        <li><span>min request limit</span> <span>1.00 USD</span></li>
-                        <li><span>max request limit</span> <span>500.00 USD</span></li>
-                    </ul>
-
-                </div>
-            </div>
+        <div class="pagination-section">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="fal fa-long-arrow-left"></i></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#"><i class="fal fa-long-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <!-- Transections section end -->
+
+        <!-- pagination section end -->
+
 
 
     </main><!-- End #main -->
+
 
 
     <!-- Offcanvas sidebar start -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">Product Filter</h5>
-            <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                <i class="fa-light fa-arrow-right"></i>
-            </button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <form>
@@ -772,6 +713,11 @@
 
 
 
+
+
+
+
+
     <!-- Jquery Js link -->
     <script src="assets/js/jquery-3.6.1.min.js"></script>
 
@@ -779,7 +725,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- select2_Js_link -->
     <script src="assets/js/select2.min.js"></script>
-    <!-- select2_Js_link -->
+    <!-- owlcarousel_Js_link -->
     <script src="assets/js/owl.carousel.min.js"></script>
 
 

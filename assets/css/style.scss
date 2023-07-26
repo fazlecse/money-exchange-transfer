@@ -42,7 +42,6 @@ Typography
 :root {
     --body-font: 'Jost', sans-serif;
     --heading-font: 'Jost', sans-serif;
-    // --primary-color: #51B6BB;
     --primary-color: #009868;
     --heading-color: #26282C;
     --black: #26282C;
@@ -50,15 +49,14 @@ Typography
     --white: #ffffff;
     --soft-blue: #C1BFFD;
     --grayish-violet: #f5f4f7;
-    --btn-bg1: #009868;
-    --btn-bg2: #007f57;
+    --btn-hover-bg: #007f57;
     --soft-green: #ccf888;
     --soft-red: #FE5758;
     --soft-red: #d82a68;
     --lime-green: #40b781;
     --vivid-orange: #fb6116;
     --yellow: #fcc013;
-    --input-color: #FAFAFA;
+    --input-color: #F5F4F7;
     --primary-color-opacity-low: rgba(0, 153, 105, 0.1);
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
     --bg-color1: rgba(0, 153, 105, 0.1);
@@ -327,15 +325,15 @@ textarea.form-control {
 
 .form-control,
 .form-select {
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: var(--input-color);
     height: 45px;
-    border: 1px solid var(--border-color2);
+    border: 1px solid var(--input-color);
 }
 
 .form-control:focus,
 .form-select:focus {
-    box-shadow: 0 0 0 4px rgba(81, 182, 187, 0.1);
+    box-shadow: 0 0 0 4px rgba(0, 153, 105, 0.1);
     border: 1px solid var(--primary-color);
 }
 
@@ -384,7 +382,6 @@ textarea.form-control {
     justify-content: center;
     background-color: var(--primary-color);
 }
-
 /*----------------------------------------------
 intlTelInput section start
 ----------------------------------------------*/
@@ -393,8 +390,8 @@ intlTelInput section start
 }
 
 .iti__selected-flag {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .iti__country-list {
@@ -678,12 +675,12 @@ figure {
 }
 
 .logo {
-    max-width: 130px;
+    max-width: 150px;
     min-width: 100px;
 }
 
 .footer-logo {
-    max-width: 100px;
+    max-width: 150px;
     min-width: 100px;
 }
 
@@ -978,10 +975,10 @@ Offcanvas end
 }
 
 .cmn-btn {
-    background: var(--btn-bg1);
+    background: var(--primary-color);
     padding: 12px 20px;
     border-radius: 5px;
-    border: 1px solid var(--btn-bg1);
+    border: 1px solid var(--primary-color);
     transition: all .3s ease-in-out;
     font-size: 16px;
     color: var(--white);
@@ -994,7 +991,8 @@ Offcanvas end
 
     &:hover {
         color: var(--white);
-        background-color: var(--btn-bg2);
+        background-color: var(--btn-hover-bg);
+        border: 1px solid var(--btn-hover-bg);
     }
 }
 
@@ -1076,16 +1074,16 @@ Offcanvas end
     align-items: center;
     justify-content: center;
     font-weight: 500;
-    background: var(--btn-bg1);
+    background: var(--primary-color);
     color: var(--white);
     transition: var(--transition);
     text-transform: capitalize;
-    border: 1px solid var(--btn-bg1);
+    border: 1px solid var(--primary-color);
 
     &:hover {
-        background-color: var(--btn-bg2);
+        background-color: var(--btn-hover-bg);
         color: var(--white);
-        border: 1px solid var(--btn-bg2);
+        border: 1px solid var(--btn-hover-bg);
     }
 }
 
@@ -1323,7 +1321,7 @@ section {
     align-items: center;
     justify-content: center;
     margin-right: 14px;
-    border-radius: 50%;
+    border-radius: 2px;
     background: var(--white);
     color: var(--primary-color);
     box-shadow: var(--shadow3);
@@ -1782,7 +1780,8 @@ Padding bottom
     box-shadow: var(--shadow2);
     z-index: 999;
     padding: 20px 0;
-    .navbar-nav .nav-link{
+
+    .navbar-nav .nav-link {
         color: var(--heading-color);
     }
 
@@ -1792,7 +1791,7 @@ Padding bottom
     transition: var(--transition);
     padding: 20px;
     z-index: 9999;
-    
+
 
     .navbar-toggler {
         background: var(--primary-color);
@@ -1951,13 +1950,14 @@ Bottom Mobile, Tab nav end
 ----------------------------------------------*/
 .hero-section {
     // background-image: url(../img/hero/mid-img-2.jpg);
-    background-image: linear-gradient(rgba(2, 26, 46, 0.6), rgba(2, 25, 44, 0.6)),url(../img/hero/pexels-anete-lusina-6353681.jpg);
+    background-image: linear-gradient(rgba(2, 26, 46, 0.6), rgba(2, 25, 44, 0.6)), url(../img/hero/pexels-anete-lusina-6353681.jpg);
     padding: 200px 0;
     background-size: cover;
     background-position: center;
 
     .hero-content {
         color: var(--white);
+
         .hero-title {
             color: var(--white);
             max-width: 1100px;
@@ -1989,11 +1989,7 @@ Bottom Mobile, Tab nav end
     }
 }
 
-@media (max-width: 767px) {
-  
-
-
-}
+@media (max-width: 767px) {}
 
 // Hero responsive end
 
@@ -2003,13 +1999,13 @@ Hero end
 /*----------------------------------------------
 04. Calculator section start
 ----------------------------------------------*/
-
 .calculator {
     background-color: var(--white);
     padding: 30px;
     border-radius: 15px;
     box-shadow: var(--shadow1);
-    .calculator-header{
+
+    .calculator-header {
         margin-bottom: 20px;
     }
 
@@ -2080,7 +2076,7 @@ Hero end
 }
 
 // Responsive calculator section start 
-@media (max-width: 1399px){
+@media (max-width: 1399px) {
     .input-box {
         .form-control {
             padding-right: 155px;
@@ -2095,6 +2091,7 @@ Hero end
         }
     }
 }
+
 @media (max-width: 1199px) {
     .calculator .form-description .single-description {
         display: block;
@@ -2702,8 +2699,8 @@ Blog end
             transition: var(--transition);
             position: absolute;
             right: 5px;
-            background-color: var(--btn-bg1);
-            height: 45px;
+            background-color: var(--primary-color);
+            height: calc(100% - 10px);
             border-radius: 9999px;
             padding: 10px 40px;
             color: var(--white);
@@ -2711,7 +2708,7 @@ Blog end
             align-items: center;
 
             &:hover {
-                background-color: var(--btn-bg2);
+                background-color: var(--btn-hover-bg);
                 color: var(--white);
             }
         }
