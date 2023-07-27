@@ -2950,6 +2950,15 @@ Contact end
   cursor: pointer;
 }
 
+.rtl .password-box .form-control {
+  padding-right: 0.75rem;
+  padding-left: 35px;
+}
+.rtl .password-box .password-icon {
+  right: auto;
+  left: 15px;
+}
+
 @media (max-width: 991px) {
   .login-signup-page {
     padding-top: 100px;
@@ -2975,14 +2984,6 @@ Contact end
 .rtl .login-signup-page::after {
   left: 0;
   right: auto;
-}
-.rtl .password-box .form-control {
-  padding-right: 0.75rem;
-  padding-left: 35px;
-}
-.rtl .password-box .password-icon {
-  right: auto;
-  left: 15px;
 }
 
 /*----------------------------------------------

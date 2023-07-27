@@ -8,11 +8,12 @@
     --black: #26282C;
     --grayish-blue: #929cbf;
     --btn-hover-bg: #007f57;
+    --btn-hover-bg2: #8e1b0b;
     --white: #ffffff;
     --soft-blue: #C1BFFD;
     --grayish-violet: #f5f4f7;
     --soft-green: #ccf888;
-    --soft-red: #FE5758;
+    --dark-red: #a8200d;
     --lime-green: #40b781;
     --input-color: #F5F4F7;
     --primary-color-opacity-low: rgba(0, 153, 105, 0.1);
@@ -220,6 +221,7 @@ textarea.form-control {
 
 label {
     text-transform: capitalize;
+    margin-bottom: 5px;
 }
 
 .rtl {
@@ -620,6 +622,11 @@ body::-webkit-scrollbar-thumb {
     transition: all 0.5s ease-in-out;
 }
 
+.link {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
 // --------------------------------------------------------
 // Reset section end
 // --------------------------------------------------------
@@ -846,29 +853,37 @@ body::-webkit-scrollbar-thumb {
 
 
 .cmn-btn2 {
-    background: var(--btn-bg2);
-    padding: 15px 25px;
+    background: var(--dark-red);
+    padding: 8px 20px;
     border-radius: 10px;
-    transition: all .3s ease-in-out;
-    font-size: 18px;
-    color: var(--heading-color);
-    display: flex;
+    border: 1px solid var(--dark-red);
+    transition: var(--transition);
+    font-size: 16px;
+    color: var(--white);
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
-    border: 1px solid var(--btn-bg2);
+    font-family: var(--heading-font);
+
+    &:hover {
+        color: var(--white);
+        background-color: var(--btn-hover-bg2);
+        border: 1px solid var(--btn-hover-bg2);
+    }
 }
 
 .cmn-btn3 {
     background: var(--white);
     padding: 8px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: var(--transition);
     font-size: 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
     text-transform: capitalize;
     border: 1px solid var(--primary-color);
 
@@ -916,6 +931,42 @@ body::-webkit-scrollbar-thumb {
     color: var(--white);
 
 }
+
+// Password box start
+.password-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .form-control {
+        padding-right: 35px;
+    }
+
+    .password-icon {
+        position: absolute;
+        right: 15px;
+        cursor: pointer;
+    }
+}
+
+// Rtl password box start
+.rtl {
+    .password-box {
+        .form-control {
+            padding-right: .75rem;
+            padding-left: 35px;
+        }
+
+        .password-icon {
+            right: auto;
+            left: 15px;
+        }
+    }
+}
+
+
+// Rtl password box end
+// Password box end
 
 // Dark theme btn start
 .dark-theme {
@@ -3678,6 +3729,7 @@ Settings section start
         font-weight: 400;
         font-size: 16px;
         padding: 15px;
+        border-radius: 10px;
 
         .title {
             transition: var(--transition);
@@ -3696,50 +3748,66 @@ Settings section start
             background: var(--primary-color-opacity-low);
         }
 
-        .icon-area {
-            font-size: 20px;
-            height: 50px;
-            width: 50px;
-            min-width: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color-opacity-low);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-        }
+    }
+    .sm-circle {
+        font-size: 20px;
+        height: 50px;
+        width: 50px;
+        min-width: 50px;
+        border-radius: 50%;
+        background-color: var(--primary-color-opacity-low);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
     }
 
     .accordion-body {
         padding: 15px 15px 25px;
     }
-    .cmn-table{
+
+    .cmn-table {
         box-shadow: var(--shadow2);
+
         table {
             thead tr th {
                 font-size: 18px;
                 font-weight: 600;
                 background-color: transparent;
             }
-    
+
             tbody td {
                 padding: 20px 10px;
-                p{
+
+                p {
                     font-weight: 600;
                 }
             }
-    
+
         }
     }
-     .cmn-table tr:not(:last-child){
+
+    .cmn-table tr:not(:last-child) {
         border-bottom: 1px solid var(--border-color2);
     }
 
-   
-    .form-check-input{
+
+    .form-check-input {
         width: 20px;
         height: 20px;
     }
+    .form-switch{
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        .form-check-label{
+            width: 100%;
+        }
+        .form-check-input{
+            width: 50px;
+            height: 25px;
+        }
+    } 
 }
 
 .accordion-item {
@@ -3790,6 +3858,29 @@ Settings section start
             background-position: center;
             border-radius: 8px;
         }
+    }
+}
+
+.list-container {
+    .list-item {
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--border-color2);
+        }
+
+        .list-header {
+            padding: 15px 0 10px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        .body {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
     }
 }
 

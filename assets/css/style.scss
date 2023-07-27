@@ -382,6 +382,7 @@ textarea.form-control {
     justify-content: center;
     background-color: var(--primary-color);
 }
+
 /*----------------------------------------------
 intlTelInput section start
 ----------------------------------------------*/
@@ -3581,6 +3582,7 @@ Contact end
     }
 }
 
+// Password box start
 .password-box {
     position: relative;
     display: flex;
@@ -3596,6 +3598,27 @@ Contact end
         cursor: pointer;
     }
 }
+
+// Rtl password box start
+.rtl {
+    .password-box {
+        .form-control {
+            padding-right: .75rem;
+            padding-left: 35px;
+        }
+
+        .password-icon {
+            right: auto;
+            left: 15px;
+        }
+    }
+}
+
+
+// Rtl password box end
+// Password box end
+
+
 
 // Responsive login signup start
 @media (max-width: 991px) {
@@ -3636,17 +3659,6 @@ Contact end
         }
     }
 
-    .password-box {
-        .form-control {
-            padding-right: .75rem;
-            padding-left: 35px;
-        }
-
-        .password-icon {
-            right: auto;
-            left: 15px;
-        }
-    }
 
 }
 

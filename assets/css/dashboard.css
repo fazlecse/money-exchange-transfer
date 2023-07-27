@@ -7,11 +7,12 @@
   --black: #26282C;
   --grayish-blue: #929cbf;
   --btn-hover-bg: #007f57;
+  --btn-hover-bg2: #8e1b0b;
   --white: #ffffff;
   --soft-blue: #C1BFFD;
   --grayish-violet: #f5f4f7;
   --soft-green: #ccf888;
-  --soft-red: #FE5758;
+  --dark-red: #a8200d;
   --lime-green: #40b781;
   --input-color: #F5F4F7;
   --primary-color-opacity-low: rgba(0, 153, 105, 0.1);
@@ -204,6 +205,7 @@ textarea.form-control {
 
 label {
   text-transform: capitalize;
+  margin-bottom: 5px;
 }
 
 .rtl .form-switch {
@@ -560,6 +562,11 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.5s ease-in-out;
 }
 
+.link {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
 .card1-bg {
   background: #182122;
 }
@@ -745,29 +752,36 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cmn-btn2 {
-  background: var(--btn-bg2);
-  padding: 15px 25px;
+  background: var(--dark-red);
+  padding: 8px 20px;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  font-size: 18px;
-  color: var(--heading-color);
-  display: flex;
+  border: 1px solid var(--dark-red);
+  transition: var(--transition);
+  font-size: 16px;
+  color: var(--white);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
-  border: 1px solid var(--btn-bg2);
+  font-family: var(--heading-font);
+}
+.cmn-btn2:hover {
+  color: var(--white);
+  background-color: var(--btn-hover-bg2);
+  border: 1px solid var(--btn-hover-bg2);
 }
 
 .cmn-btn3 {
   background: var(--white);
   padding: 8px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: var(--transition);
   font-size: 16px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
   text-transform: capitalize;
   border: 1px solid var(--primary-color);
 }
@@ -810,6 +824,29 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
   line-height: initial;
   color: var(--white);
+}
+
+.password-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.password-box .form-control {
+  padding-right: 35px;
+}
+.password-box .password-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+.rtl .password-box .form-control {
+  padding-right: 0.75rem;
+  padding-left: 35px;
+}
+.rtl .password-box .password-icon {
+  right: auto;
+  left: 15px;
 }
 
 .dark-theme .cmn-btn2 {
@@ -3025,6 +3062,7 @@ Settings section start
   font-weight: 400;
   font-size: 16px;
   padding: 15px;
+  border-radius: 10px;
 }
 .settings-accordion .accordion-button .title {
   transition: var(--transition);
@@ -3039,7 +3077,7 @@ Settings section start
   box-shadow: none;
   background: var(--primary-color-opacity-low);
 }
-.settings-accordion .accordion-button .icon-area {
+.settings-accordion .sm-circle {
   font-size: 20px;
   height: 50px;
   width: 50px;
@@ -3074,6 +3112,18 @@ Settings section start
 .settings-accordion .form-check-input {
   width: 20px;
   height: 20px;
+}
+.settings-accordion .form-switch {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+.settings-accordion .form-switch .form-check-label {
+  width: 100%;
+}
+.settings-accordion .form-switch .form-check-input {
+  width: 50px;
+  height: 25px;
 }
 
 .accordion-item {
@@ -3116,6 +3166,21 @@ Settings section start
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 8px;
+}
+
+.list-container .list-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color2);
+}
+.list-container .list-item .list-header {
+  padding: 15px 0 10px;
+}
+.list-container .list-item .list-header i {
+  margin-right: 10px;
+}
+.list-container .list-item .body {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
 }
 
 .rtl .accordion-button {
