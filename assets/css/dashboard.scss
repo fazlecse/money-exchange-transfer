@@ -322,7 +322,7 @@ label {
     background: var(--input-color);
     font-size: 15px;
     padding: .375rem 15px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 
@@ -978,6 +978,58 @@ body::-webkit-scrollbar-thumb {
 }
 
 // Dark theme btn end
+// Search box section start 
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .form-control {
+        border-radius: 10px;
+        border: 1px solid var(--border-color2);
+        background-color: var(--white);
+        padding-right: 50px;
+
+        &:focus {
+            border-color: var(--primary-color);
+        }
+    }
+
+    .search-btn {
+        position: absolute;
+        background-color: var(--primary-color);
+        width: 45px;
+        height: 90%;
+        border-radius: 8px;
+        right: 2px;
+
+        i {
+            color: var(--white);
+            font-size: 18px;
+        }
+    }
+
+
+}
+
+// Rtl search box section start 
+.rtl {
+    .search-box {
+        .search-btn {
+            left: 2px;
+            right: auto;
+        }
+
+        .form-control {
+            padding-right: 10px;
+            padding-left: 50px;
+        }
+    }
+}
+
+// Rtl search box section end
+// Search box section end
+
 
 // --------------------------------------------------------
 // -- Cmn tab section start --
@@ -2012,7 +2064,7 @@ hr.divider:after {
     }
 }
 
-@media (min-width: 991px) {
+@media (max-width: 991px) {
     #main {
         min-height: calc(100vh - 137px);
     }
@@ -3900,6 +3952,56 @@ Settings section start
 // Faq rtl end
 /*----------------------------------------------------
 Settings  end
+----------------------------------------------------*/
+/*----------------------------------------------------
+Recipients section start
+----------------------------------------------------*/
+.recipients-section{
+    .search-area{
+        display: flex;
+        .cmn-btn3{
+            margin-left: 10px;
+        }
+    }
+}
+.recipients-list-container{
+    margin-top: 30px;
+    .title{
+        border-bottom: 1px solid var(--border-color1);
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }  
+    .item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        border-radius: 10px;
+        &:hover{
+            background-color: var(--primary-color-opacity-low);
+        }
+        .item-left{
+            display: flex;
+        }
+        .item-right{
+            .icon-area{
+                font-size: 22px;
+            }
+        }
+        .thumb-area{
+            img{
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+                margin-right: 10px;
+                border: 1px solid var(--border-color2);
+            }
+        }
+    }      
+}
+/*----------------------------------------------------
+Recipients section end
 ----------------------------------------------------*/
 
 

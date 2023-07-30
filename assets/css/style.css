@@ -688,7 +688,7 @@ Reuseble style section start
 }
 .search-box .search-btn {
   position: absolute;
-  background-color: var(--btn-bg1);
+  background-color: var(--primary-color);
   width: 45px;
   height: 90%;
   border-radius: 5px;
