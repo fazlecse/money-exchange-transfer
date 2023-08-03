@@ -313,9 +313,25 @@
                     <i class="fa-light fa-grid-2"></i>
                     <span>Overview</span>
                 </a>
-            </li><!-- End Dashboard Nav -->
-
-            <!-- Start Account settings Nav -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-recipients.html">
+                    <i class="fa-light fa-user-group"></i>
+                    <span>Recipients</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-manage.html">
+                    <i class="fa-light fa-grid-2"></i>
+                    <span>Manage</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-earn.html">
+                    <i class="fa-light fa-gift"></i>
+                    <span>Earn &euro;50</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components" data-bs-toggle="collapse" href="#">
                     <i class="fa-light fa-magnet"></i><span>Components</span>
@@ -334,22 +350,18 @@
                     </li>
                 </ul>
             </li>
-            <!-- End Account settings Nav -->
-
             <li class="nav-item">
                 <a class="nav-link collapsed" href="user-panel-fund-history.html">
                     <i class="fa-light fa-clock-rotate-left"></i>
                     <span>Fund History</span>
                 </a>
-            </li><!-- End AI Images Page Nav -->
-
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="user-panel-transection.html">
                     <i class="fa-light fa-arrow-right-arrow-left"></i>
                     <span>Transections</span>
                 </a>
-            </li><!-- End AI Code Page Nav -->
-
+            </li>
         </ul>
 
         <ul class="nav-bottom">
@@ -386,6 +398,7 @@
         <div class="row">
             <div class="col-xxl-8 col-lg-10 mx-auto">
                 <div class="mian-inner">
+                    <!-- Page title start -->
                     <div class="pagetitle">
                         <h4 class="mb-1">Dashboard</h4>
                         <nav>
@@ -395,93 +408,91 @@
                             </ol>
                         </nav>
                     </div>
-                    <!-- End Page Title -->
+                   <!-- Page title start -->
+                   
                     <!-- Recipients section start -->
-                    <div class="recipients-sectin">
+                    <div class="recipients-section">
                         <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0">Recipients</h3>
+                            </div>
                             <div class="card-body">
-
-                                <div class="recipients-section">
-                                    <h3 class="mb-25">Recipients</h3>
-                                    <div class="search-area">
-                                        <div class="search-box flex-grow-1">
-                                            <input type="text" class="form-control" placeholder="Name, email, phone">
-                                            <button type="submit" class="search-btn"><i
-                                                    class="far fa-search"></i></button>
-                                        </div>
-                                        <button type="button" class="cmn-btn3" data-bs-toggle="modal" data-bs-target="#exampleModal">Add recipient</button>
+                                <div class="search-area">
+                                    <div class="search-box flex-grow-1">
+                                        <input type="text" class="form-control" placeholder="Name, email, phone">
+                                        <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
                                     </div>
-
-                                    <div class="recipients-list-container">
-                                        <h6 class="title">All</h6>
-                                        <a href="" class="item">
-                                            <div class="item-left">
-                                                <div class="thumb-area">
-                                                    <img src="assets/img/Person/1.jpg" alt="">
-                                                </div>
-                                                <div class="content-area">
-                                                    <h5 class="mb-0">Hasina Akter</h5>
-                                                    <span>BDT mobile wallet ending in 3631</span>
-                                                </div>
-                                            </div>
-                                            <div class="item-right">
-                                                <div class="icon-area">
-                                                    <i class="fa-light fa-angle-right"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="" class="item">
-                                            <div class="item-left">
-                                                <div class="thumb-area">
-                                                    <img src="assets/img/Person/2.jpg" alt="">
-                                                </div>
-                                                <div class="content-area">
-                                                    <h5 class="mb-0">Hasina Akter</h5>
-                                                    <span>BDT mobile wallet ending in 3631</span>
-                                                </div>
-                                            </div>
-                                            <div class="item-right">
-                                                <div class="icon-area">
-                                                    <i class="fa-light fa-angle-right"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="" class="item">
-                                            <div class="item-left">
-                                                <div class="thumb-area">
-                                                    <img src="assets/img/Person/3.jpg" alt="">
-                                                </div>
-                                                <div class="content-area">
-                                                    <h5 class="mb-0">Hasina Akter</h5>
-                                                    <span>BDT mobile wallet ending in 3631</span>
-                                                </div>
-                                            </div>
-                                            <div class="item-right">
-                                                <div class="icon-area">
-                                                    <i class="fa-light fa-angle-right"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="" class="item">
-                                            <div class="item-left">
-                                                <div class="thumb-area">
-                                                    <img src="assets/img/Person/4.jpg" alt="">
-                                                </div>
-                                                <div class="content-area">
-                                                    <h5 class="mb-0">Hasina Akter</h5>
-                                                    <span>BDT mobile wallet ending in 3631</span>
-                                                </div>
-                                            </div>
-                                            <div class="item-right">
-                                                <div class="icon-area">
-                                                    <i class="fa-light fa-angle-right"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-
+                                    <button type="button" class="cmn-btn3" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" id="addRecipient">Add recipient</button>
                                 </div>
 
+                                <div class="list-container mt-30">
+                                    <h6 class="title">All</h6>
+                                    <a href="" class="item">
+                                        <div class="item-left">
+                                            <div class="thumb-area">
+                                                <img src="assets/img/Person/1.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5 class="mb-0">Hasina Akter</h5>
+                                                <span>BDT mobile wallet ending in 3631</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-right">
+                                            <div class="icon-area">
+                                                <i class="fa-light fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="item-left">
+                                            <div class="thumb-area">
+                                                <img src="assets/img/Person/2.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5 class="mb-0">Hasina Akter</h5>
+                                                <span>BDT mobile wallet ending in 3631</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-right">
+                                            <div class="icon-area">
+                                                <i class="fa-light fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="item-left">
+                                            <div class="thumb-area">
+                                                <img src="assets/img/Person/3.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5 class="mb-0">Hasina Akter</h5>
+                                                <span>BDT mobile wallet ending in 3631</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-right">
+                                            <div class="icon-area">
+                                                <i class="fa-light fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="item-left">
+                                            <div class="thumb-area">
+                                                <img src="assets/img/Person/4.jpg" alt="">
+                                            </div>
+                                            <div class="content-area">
+                                                <h5 class="mb-0">Hasina Akter</h5>
+                                                <span>BDT mobile wallet ending in 3631</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-right">
+                                            <div class="icon-area">
+                                                <i class="fa-light fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -547,30 +558,77 @@
     <!-- Offcanvas sidebar end -->
 
     <!-- Modal section start -->
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title" id="exampleModalLabel">
+                   Create a recipient
+                    </h4>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-light fa-xmark"></i>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus est eligendi sit facere earum pariatur tempora animi id vero recusandae repudiandae dolores fuga saepe odio, ex consectetur eos eveniet maiores cum harum! Obcaecati, mollitia quam alias fuga quaerat sunt, earum voluptatibus quasi corrupti sed eligendi tempore saepe architecto et. Quam?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequuntur eveniet officia obcaecati? Aut cumque officiis harum officia? Voluptate nihil vero, adipisci rerum consequuntur quia tempore doloremque, placeat reprehenderit error, non quos enim blanditiis exercitationem quaerat expedita dolores? Officiis labore debitis culpa distinctio ea voluptatibus recusandae id non eius totam dignissimos eos magni esse perspiciatis alias, hic reprehenderit! Ratione quos libero, eaque et numquam nemo, voluptatem nesciunt recusandae quod doloribus tenetur temporibus eos aperiam expedita rerum atque! Explicabo reprehenderit nisi delectus eos odit maxime natus cupiditate ullam culpa nam iusto, repellendus aperiam sint voluptates quisquam voluptatem dignissimos asperiores deleniti architecto error consectetur provident sunt! Est facere alias vero impedit. Quod quam quaerat cumque, libero saepe pariatur vero, esse dolor praesentium quia doloribus cupiditate veritatis expedita iste fuga eaque atque. Dolor consequuntur, in, dolore aliquid excepturi ullam magni eaque commodi corrupti perspiciatis illo accusamus voluptates. Provident velit fugit iste in ea praesentium, neque minus magnam omnis, minima a inventore voluptatum error facere perferendis molestiae? Corporis voluptatibus praesentium quam, totam enim deserunt officia laborum nisi cum sit accusantium ratione corrupti in officiis odit, ullam eligendi, dolorem magnam molestiae quos omnis. Illum corporis exercitationem quo explicabo esse, reprehenderit aut tempora laborum, hic beatae odio rem, fuga unde? Temporibus dignissimos consequatur, fuga repudiandae eligendi maiores harum vitae ullam repellendus omnis eum beatae animi mollitia magni odio repellat illum expedita ab quia exercitationem? Praesentium itaque maxime aliquid impedit eius amet, harum qui ad dolore laborum doloribus quae inventore expedita minima earum ex ab quo beatae facilis esse eum dignissimos veritatis? Odit nobis corporis explicabo in, molestiae impedit repudiandae? Perferendis quod asperiores in corrupti harum, reprehenderit deleniti sunt, facilis voluptatibus itaque aut ducimus aspernatur et? Consectetur quo enim maxime earum, quaerat laborum deleniti facere deserunt cum consequatur, animi et odio vitae sit ullam odit dolorem reiciendis numquam quas explicabo obcaecati assumenda blanditiis. Eligendi repellendus laboriosam eveniet debitis aliquid maiores nisi reprehenderit soluta iste, eaque quisquam perspiciatis cupiditate aspernatur consectetur, ducimus dolorum dignissimos! Odit possimus veritatis nulla magnam asperiores fugiat, maxime, vitae veniam facere ab voluptatum suscipit aliquam, aliquid animi beatae dolorum repellendus officiis error excepturi expedita ea accusantium. Eos eum vel exercitationem veniam labore ex temporibus fuga rem ratione? Nesciunt ea aliquid consequatur voluptatibus, ab ullam rem cum hic expedita omnis placeat, tempore inventore? Voluptas sequi saepe optio. Repellendus, laboriosam aperiam ex sequi dolores amet quas provident ab magnam cum debitis, eveniet quasi sed sapiente, rem expedita porro. Doloremque magnam consectetur perferendis consequatur autem dolorum veritatis ut voluptas doloribus, suscipit aut enim itaque! Quae minus laborum officia itaque sed atque inventore sit quasi sunt, quia, repellat ullam? Facilis vero ad veniam, velit repudiandae, voluptatum repellendus error blanditiis minima vel perspiciatis repellat? Praesentium fugiat perspiciatis aperiam, sit facilis neque culpa et at quis quia reprehenderit autem, consequatur ducimus recusandae. Cum impedit exercitationem sapiente quibusdam suscipit voluptatibus ut recusandae quo ipsa veniam, in, explicabo iure, iste officiis esse voluptatum ratione? Odit, rem. Necessitatibus obcaecati sequi vel recusandae! Aliquid fugiat reiciendis quas possimus? Perspiciatis nemo numquam dignissimos iusto quo, id voluptatibus qui culpa. Aliquid non ipsa maiores sed rerum sit excepturi quisquam nostrum nemo. Repellendus doloribus maiores reprehenderit odio odit adipisci, sapiente aliquam enim? Sequi, ullam aspernatur voluptatem inventore harum fuga! Consequatur tempore explicabo consectetur obcaecati at fugiat esse voluptatem expedita nesciunt quos cumque qui, quo nulla quaerat. Alias soluta laboriosam ex at, nesciunt dolorem repellat sit expedita delectus ratione dolor ea nostrum officiis temporibus tenetur ullam praesentium omnis voluptas cum aliquam, vitae eum? Quia ab modi corporis nobis eveniet, error iusto tempora, exercitationem numquam dolorem provident! Hic rem mollitia ea eligendi a modi ducimus, vitae accusamus commodi molestiae quos illo. Vero ratione aliquid tempora sint exercitationem magnam, libero quidem cupiditate, accusamus neque facilis? Sed repellat nisi, sequi ad ratione obcaecati odio quaerat reiciendis commodi totam laboriosam facere provident architecto error ut rerum consequatur illo sapiente, fuga sunt perspiciatis dolore, quibusdam nobis. Similique earum repudiandae iste velit nesciunt? Aliquid omnis excepturi vero obcaecati quidem mollitia, cum officia earum possimus dolor explicabo! Nihil ab natus qui quo quae molestias tempore? Impedit dolore minima, blanditiis odit alias molestiae? Mollitia reiciendis earum voluptates corrupti esse, sequi asperiores deserunt vitae voluptatibus sit totam dicta quaerat! Velit repellendus nulla beatae cum enim iusto aperiam ex, ab expedita delectus doloribus omnis. Iusto quam nobis tempore amet perferendis. Ad laborum nesciunt iste corporis dolore eius. Obcaecati commodi est officia debitis porro, illum culpa suscipit maxime tempore inventore cupiditate facilis illo eius asperiores consequatur incidunt voluptates ipsa eos. Sed odit velit culpa quis ad! Iste ut a et deleniti delectus, dicta tempora ullam unde natus id beatae aperiam possimus quisquam deserunt reiciendis fugit odio consectetur ipsa ipsum atque fuga libero incidunt mollitia laboriosam. Neque laudantium pariatur expedita et. Ab doloribus libero labore dignissimos tempore hic nam assumenda molestiae, odit consectetur ipsam, earum necessitatibus asperiores nisi nesciunt optio facilis porro veritatis temporibus aliquam accusantium quas, omnis dicta? Voluptatem doloremque eos quod animi totam ipsum non iste perferendis dolore accusantium eaque qui soluta omnis dignissimos odit magnam suscipit illo, reprehenderit deserunt nesciunt unde voluptas. Unde error eligendi ea veniam commodi, praesentium natus ipsam! Consequuntur dolorem ad, eum harum doloribus maiores corporis odio, reprehenderit qui nihil temporibus quam dignissimos! Deleniti obcaecati enim adipisci deserunt excepturi eos iste, sit possimus quam fuga labore vitae exercitationem ea autem a accusantium eum similique tempore consequatur nam aspernatur nemo laboriosam! Accusamus consectetur ea qui repellendus saepe nobis aperiam vitae pariatur enim. Facilis exercitationem id sapiente quidem cum nisi expedita eum, odio consequuntur voluptate fugiat beatae. Consectetur placeat autem sapiente fugit laborum nobis. Dolorum cum, saepe cupiditate, reprehenderit laborum praesentium deserunt a fugiat, voluptate deleniti placeat vero nihil! Eligendi eaque vero mollitia soluta at nulla possimus molestiae. Tempore pariatur voluptas animi iste exercitationem neque et quis quae est mollitia itaque, quam iusto cumque fugit odit ullam fugiat molestias saepe nesciunt similique perspiciatis quia nisi delectus! Voluptas eligendi dolore modi asperiores amet explicabo, quasi minus voluptatem commodi illo, maxime saepe. Tempora officiis rem error, explicabo enim repellat, accusantium deleniti totam accusamus nisi eligendi cum vitae atque?
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div class="create-recipients-section">
+                      
+                        <div class="list-container mt-0">
+
+                            <a href="" class="item">
+                                <div class="item-left">
+                                    <div class="thumb-area">
+                                        <img src="assets/img/Person/1.jpg" alt="">
+                                    </div>
+                                    <div class="content-area">
+                                        <h5 class="mb-0">Myself</h5>
+                                    </div>
+                                </div>
+                                <div class="item-right">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="item">
+                                <div class="item-left">
+                                    <div class="thumb-area">
+                                        <i class="fa-light fa-user-group"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h5 class="mb-0">Some one else</h5>
+                                    </div>
+                                </div>
+                                <div class="item-right">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="" class="item">
+                                <div class="item-left">
+                                    <div class="thumb-area">
+                                        <i class="fa-light fa-business-time"></i>
+                                    </div>
+                                    <div class="content-area">
+                                        <h5 class="mb-0">Business or charity</h5>
+                                    </div>
+                                </div>
+                                <div class="item-right">
+                                    <div class="icon-area">
+                                        <i class="fa-light fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </div>
-    <!-- Modal section end -->
+        <!-- Modal section end -->
 
 
 
@@ -581,19 +639,19 @@
 
 
 
-    <!-- Jquery Js link -->
-    <script src="assets/js/jquery-3.6.1.min.js"></script>
+        <!-- Jquery Js link -->
+        <script src="assets/js/jquery-3.6.1.min.js"></script>
 
-    <!-- Bootstrap Js link -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- select2_Js_link -->
-    <script src="assets/js/select2.min.js"></script>
-    <!-- select2_Js_link -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+        <!-- Bootstrap Js link -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- select2_Js_link -->
+        <script src="assets/js/select2.min.js"></script>
+        <!-- select2_Js_link -->
+        <script src="assets/js/owl.carousel.min.js"></script>
 
 
-    <!-- Main Js slink -->
-    <script src="assets/js/dashboard.js"></script>
+        <!-- Main Js slink -->
+        <script src="assets/js/dashboard.js"></script>
 
 </body>
 

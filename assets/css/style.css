@@ -45,9 +45,8 @@ Typography
   --grayish-violet: #f5f4f7;
   --btn-hover-bg: #007f57;
   --soft-green: #ccf888;
-  --soft-red: #FE5758;
   --soft-red: #d82a68;
-  --lime-green: #40b781;
+  --lime-gray: #d0d0d0;
   --vivid-orange: #fb6116;
   --yellow: #fcc013;
   --input-color: #F5F4F7;
@@ -56,7 +55,7 @@ Typography
   --bg-color1: rgba(0, 153, 105, 0.1);
   --bg-color2: #F1F3F4;
   --bg-color3: #152748;
-  --bg-color4: #424449;
+  --bg-color4: #273c57;
   --body-color: #707070;
   --border-color1: #f2f2f2;
   --border-color2: #e1e1e1;
@@ -664,6 +663,10 @@ body::-webkit-scrollbar-thumb {
 
 .owl-theme .owl-dots .owl-dot span {
   transition: all 0.5s ease-in-out;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-color1);
 }
 
 /*----------------------------------------------
@@ -1753,10 +1756,19 @@ Hero end
 04. Calculator section start
 ----------------------------------------------*/
 .calculator {
-  background-color: var(--white);
+  background-color: var(--bg-color4);
   padding: 30px;
   border-radius: 15px;
   box-shadow: var(--shadow1);
+}
+.calculator h4 {
+  color: var(--white);
+}
+.calculator p {
+  color: var(--lime-gray);
+}
+.calculator .form-label {
+  color: var(--white);
 }
 .calculator .calculator-header {
   margin-bottom: 20px;
@@ -1764,6 +1776,9 @@ Hero end
 .calculator .form-description {
   margin: 15px 0;
   font-size: 14px;
+}
+.calculator .form-description .single-description {
+  color: var(--lime-gray);
 }
 .calculator .form-description .single-description i {
   margin-right: 5px;

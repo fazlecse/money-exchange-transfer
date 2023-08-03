@@ -473,7 +473,7 @@ h2 {
 
 h3 {
   font-size: 32px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: 500;
 }
 
@@ -486,6 +486,7 @@ h4 {
 
 h5 {
   font-size: 20px;
+  text-transform: capitalize;
   margin-bottom: 5px;
   font-weight: 500;
 }
@@ -1354,6 +1355,10 @@ hr.divider:after {
     color: var(--white);
   }
 }
+.carousel-1 .account-card {
+  margin-right: 32px;
+}
+
 /* margin_top */
 .mt-10 {
   margin-top: 10px;
@@ -1620,6 +1625,7 @@ hr.divider:after {
 }
 
 .card-header {
+  border-radius: 10px !important;
   padding: 20px;
   background: var(--white);
   border-bottom: 1px solid var(--border-color1);
@@ -1684,11 +1690,6 @@ hr.divider:after {
   color: var(--white);
 }
 
-@media (max-width: 991px) {
-  .carousel-area1 .card-box {
-    margin-right: 32px;
-  }
-}
 .rtl .card-item .card-title i {
   margin-right: 0;
   margin-left: 10px;
@@ -3204,16 +3205,16 @@ Settings section start
   border-radius: 8px;
 }
 
-.list-container .list-item:not(:last-child) {
+.accordion-list-container .list-item:not(:last-child) {
   border-bottom: 1px solid var(--border-color2);
 }
-.list-container .list-item .list-header {
+.accordion-list-container .list-item .list-header {
   padding: 15px 0 10px;
 }
-.list-container .list-item .list-header i {
+.accordion-list-container .list-item .list-header i {
   margin-right: 10px;
 }
-.list-container .list-item .body {
+.accordion-list-container .list-item .body {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
@@ -3241,41 +3242,89 @@ Recipients section start
   margin-left: 10px;
 }
 
-.recipients-list-container {
-  margin-top: 30px;
-}
-.recipients-list-container .title {
+.list-container .title {
   border-bottom: 1px solid var(--border-color1);
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
-.recipients-list-container .item {
+.list-container .item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
   border-radius: 10px;
 }
-.recipients-list-container .item:hover {
+.list-container .item:hover {
   background-color: var(--primary-color-opacity-low);
 }
-.recipients-list-container .item .item-left {
+.list-container .item .item-left {
   display: flex;
+  align-items: center;
 }
-.recipients-list-container .item .item-right .icon-area {
+.list-container .item .item-right .icon-area {
   font-size: 22px;
 }
-.recipients-list-container .item .thumb-area img {
+.list-container .item .item-right .content-area {
+  text-align: right;
+}
+.list-container .item .thumb-area {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  margin-right: 10px;
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--heading-color);
+  font-size: 20px;
+  background-color: var(--primary-color-opacity-low);
+}
+.list-container .item .thumb-area img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
   border: 1px solid var(--border-color2);
 }
 
 /*----------------------------------------------------
 Recipients section end
+----------------------------------------------------*/
+/*----------------------------------------------------
+Account section start
+----------------------------------------------------*/
+.account-card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--primary-color-opacity-low);
+}
+.account-card .thumb-area {
+  margin-bottom: 30px;
+}
+.account-card .thumb-area img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.account-card .content-area span {
+  text-transform: capitalize;
+}
+
+/*----------------------------------------------------
+Account section end
+----------------------------------------------------*/
+/*----------------------------------------------------
+transection-section end
+----------------------------------------------------*/
+.transection-section .search-area {
+  max-width: 550px;
+}
+.transection-section h5 {
+  text-transform: capitalize;
+}
+
+/*----------------------------------------------------
+transection-section end
 ----------------------------------------------------*/
 .pagination-section {
   margin-top: 50px;

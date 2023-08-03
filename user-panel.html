@@ -309,19 +309,32 @@
 
 
     <!-- Sidebar section start -->
-
     <aside id="sidebar" class="sidebar">
-
         <ul class="sidebar-nav" id="sidebar-nav">
-
             <li class="nav-item">
                 <a class="nav-link active" href="user-panel.html">
                     <i class="fa-light fa-grid-2"></i>
                     <span>Overview</span>
                 </a>
-            </li><!-- End Dashboard Nav -->
-
-            <!-- Start Account settings Nav -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-recipients.html">
+                    <i class="fa-light fa-user-group"></i>
+                    <span>Recipients</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-manage.html">
+                    <i class="fa-light fa-grid-2"></i>
+                    <span>Manage</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="user-panel-earn.html">
+                    <i class="fa-light fa-gift"></i>
+                    <span>Earn &euro;50</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components" data-bs-toggle="collapse" href="#">
                     <i class="fa-light fa-magnet"></i><span>Components</span>
@@ -340,22 +353,18 @@
                     </li>
                 </ul>
             </li>
-            <!-- End Account settings Nav -->
-
             <li class="nav-item">
                 <a class="nav-link collapsed" href="user-panel-fund-history.html">
                     <i class="fa-light fa-clock-rotate-left"></i>
                     <span>Fund History</span>
                 </a>
-            </li><!-- End AI Images Page Nav -->
-
+            </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="user-panel-transection.html">
                     <i class="fa-light fa-arrow-right-arrow-left"></i>
                     <span>Transections</span>
                 </a>
-            </li><!-- End AI Code Page Nav -->
-
+            </li>
         </ul>
 
         <ul class="nav-bottom">
@@ -388,143 +397,280 @@
     <!-- Sidebar section end -->
 
 
-    <main id="main" class="main bg-transparent">
-        <div class="section dashboard">
-            <!-- Left side columns -->
+    <main id="main" class="main">
+        <div class="row">
+            <div class="col-xxl-8 col-lg-10 mx-auto">
+                <!-- Page title start -->
+                <div class="pagetitle">
+                    <h4 class="mb-1">Dashboard</h4>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </nav>
+                </div>
+                <!-- Page title start -->
 
-
-
-            <div class="row g-xxl-5 g-4">
-                <div class="col-lg-8 ">
+                <!-- Account section start -->
+                <div class="account-section">
+                    <h3>Account</h3>
+                    <!-- Carousel section start -->
                     <div class="row">
-                        <!-- baner card start -->
                         <div class="col-12">
-                            <div class="banner-card card1-bg">
-                                <div class="banner-card-inner">
-                                    <div class="title">Upgrade Your Plan to <span class="highlight2">Premium</span> and
-                                        Get
-                                        unlimited access</div>
-
-                                    <div class="btn-area">
-                                        <button type="button" class="cmn-btn2">Upgrade now</button>
+                            <div class="owl-carousel owl-theme carousel-1">
+                                <div class="item">
+                                    <div class="account-card">
+                                        <div class="thumb-area">
+                                            <img src="assets/img/mini-flag/bd.svg" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h6>1000.00</h6>
+                                            <span>Bangladeshi Taka</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="shape1">
-                                    <i class="fa-brands fa-bitcoin"></i>
+                                <div class="item">
+                                    <div class="account-card">
+                                        <div class="thumb-area">
+                                            <img src="assets/img/mini-flag/us.svg" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h6>1000.00</h6>
+                                            <span>US dollar</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="shape2"><i class="fa-brands fa-ethereum"></i></div>
-                                <div class="shape3"> <i class="fa-solid fa-sparkles"></i></div>
+                                <div class="item">
+                                    <div class="account-card">
+                                        <div class="thumb-area">
+                                            <img src="assets/img/mini-flag/gb.svg" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h6>1000.00</h6>
+                                            <span>britsh pound</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="account-card">
+                                        <div class="thumb-area">
+                                            <img src="assets/img/mini-flag/eu.svg" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h6>1000.00</h6>
+                                            <span>euro</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- baner card end -->
                     </div>
-                    <div class="card-box-section d-none d-lg-block">
-                        <div class="row">
-                            <div class="col-xxl-4 col-sm-6 card-item">
-                                <div class="card-box card2-bg">
-                                    <div class="icon-area">
-                                        <i class="fa-regular fa-money-bills"></i>
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">$5,000</div>
-                                        <p>Total Assets</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xxl-4 col-sm-6 card-item">
-                                <div class="card-box card3-bg">
-                                    <div class="icon-area">
-                                        <i class="fa-regular fa-briefcase"></i>
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">$7,100</div>
-                                        <p>Total Deposits</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xxl-4 col-sm-6 card-item">
-                                <div class="card-box card1-bg">
-                                    <div class="icon-area">
-                                        <i class="fa-regular fa-signal-bars"></i>
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">+5.6%</div>
-                                        <p>APY</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
+                    <!-- Carousel section end -->
                 </div>
-                <div class="col-lg-4 ">
-                    <div class="section-right">
-                        <div class="card-box2">
-                            <div class="image-area">
-                                <img src="assets/img/profile/profile3.jpg" alt="">
-                            </div>
-                            <div class="text-area">
-                                <h4>Total Balance</h4>
-                                <div class="title">$15,542.04</div>
-                                <div class="interest-area">
-                                    <div class="interest">+14.23%</div>
-                                    <div class="interest"><i class="fa-regular fa-arrow-up-right"></i></div>
+                <!-- Account section end -->
+
+                <!-- Transection section start -->
+                <div class="transection-section mt-50">
+                    <div class="card">
+                        <div class="card-header gap-5 d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0">Transactions</h4>
+                            <div class="search-area gap-3 d-flex flex-grow-1">
+                                <div class="search-box flex-grow-1">
+                                    <input type="text" class="form-control" placeholder="Search here...">
+                                    <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
                                 </div>
+                                <button type="button" class="cmn-btn3" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" id="addRecipient">see all</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-container">
+                                <a href="" class="item">
+                                    <div class="item-left">
+                                        <div class="thumb-area">
+                                            <i class="fa-light fa-arrow-up"></i>
+                                        </div>
+                                        <div class="content-area">
+                                            <h5 class="mb-0">md ariful islam</h5>
+                                            <span>Sent - 2 Oct 2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="content-area">
+                                            <h6>25,003.69 BDT</h6>
+                                            <span>250 USD</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <div class="item-left">
+                                        <div class="thumb-area">
+                                            <i class="fa-light fa-arrow-down"></i>
+                                        </div>
+                                        <div class="content-area">
+                                            <h5 class="mb-0">alexandru crala</h5>
+                                            <span>Sent - 30 Sep 2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="content-area">
+                                            <h6>+ 250 USD</h6>
+                                            <span>250 USD</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="" class="item">
+                                    <div class="item-left">
+                                        <div class="thumb-area">
+                                            <i class="fa-light fa-arrow-up"></i>
+                                        </div>
+                                        <div class="content-area">
+                                            <h5 class="mb-0">alexandru crala</h5>
+                                            <span>Sent - 30 Sep 2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="content-area">
+                                            <h6>4996.98 BDT</h6>
+                                            <span>50 USD</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Transection section end -->
+
+                <!-- Receive locally section start -->
+                <div class="receive-locally-section mt-50">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">Receive locally</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-container">
+                                <a href="" class="item">
+                                    <div class="item-left">
+                                        <div class="thumb-area">
+                                            <img src="assets/img/mini-flag/bd.svg" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5 class="mb-0">Bangladeshi Taka</h5>
+                                            <span>IBAN</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="icon-area">
+                                            <i class="fa-light fa-angle-right"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <div class="item-left">
+                                        <div class="thumb-area">
+                                            <img src="assets/img/mini-flag/gb.svg" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5 class="mb-0">britsh pound</h5>
+                                            <span>UK sort code, Account number, IBAN</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="icon-area">
+                                            <i class="fa-light fa-angle-right"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <div class="item-left">
+                                        <div class="thumb-area">
+                                            <img src="assets/img/mini-flag/us.svg" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5 class="mb-0">USD</h5>
+                                            <span>IBAN, Account number</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="icon-area">
+                                            <i class="fa-light fa-angle-right"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="" class="item">
+                                    <div class="item-left">
+                                        <div class="thumb-area">
+                                            <img src="assets/img/mini-flag/eu.svg" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5 class="mb-0">Euro</h5>
+                                            <span>IBAN, SWIFT/BIC</span>
+                                        </div>
+                                    </div>
+                                    <div class="item-right">
+                                        <div class="icon-area">
+                                            <i class="fa-light fa-angle-right"></i>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Receive localy section end -->
+
+
             </div>
-
-            <!-- Tab mobile view carousel start -->
-            <div class="tab-mobile-view-carousel-section mb-30 d-lg-none">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="owl-carousel owl-theme carousel-area1">
-                            <div class="item card-item">
-                                <div class="card-box card2-bg">
-                                    <div class="icon-area">
-                                        <i class="fa-regular fa-money-bills"></i>
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">$5,000</div>
-                                        <p>Total Assets</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item card-item">
-                                <div class="card-box card3-bg">
-                                    <div class="icon-area">
-                                        <i class="fa-regular fa-briefcase"></i>
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">$7,100</div>
-                                        <p>Total Deposits</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item card-item">
-                                <div class="card-box card1-bg">
-                                    <div class="icon-area">
-                                        <i class="fa-regular fa-signal-bars"></i>
-                                    </div>
-                                    <div class="text-area">
-                                        <div class="title">+5.6%</div>
-                                        <p>APY</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Tab mobile view carousel start -->
-
-
-
-
         </div>
+
+        <!-- Tab mobile view carousel start -->
+        <div class="tab-mobile-view-carousel-section mb-30 d-lg-none">
+            <div class="row">
+                <div class="col-12">
+                    <div class="owl-carousel owl-theme carousel-area1">
+                        <div class="item card-item">
+                            <div class="card-box card2-bg">
+                                <div class="icon-area">
+                                    <i class="fa-regular fa-money-bills"></i>
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">$5,000</div>
+                                    <p>Total Assets</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item card-item">
+                            <div class="card-box card3-bg">
+                                <div class="icon-area">
+                                    <i class="fa-regular fa-briefcase"></i>
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">$7,100</div>
+                                    <p>Total Deposits</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item card-item">
+                            <div class="card-box card1-bg">
+                                <div class="icon-area">
+                                    <i class="fa-regular fa-signal-bars"></i>
+                                </div>
+                                <div class="text-area">
+                                    <div class="title">+5.6%</div>
+                                    <p>APY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab mobile view carousel start -->
 
     </main><!-- End #main -->
 

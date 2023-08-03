@@ -532,7 +532,7 @@ h2 {
 
 h3 {
     font-size: 32px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 
@@ -545,6 +545,7 @@ h4 {
 
 h5 {
     font-size: 20px;
+    text-transform: capitalize;
     margin-bottom: 5px;
     font-weight: 500;
 }
@@ -1613,6 +1614,15 @@ hr.divider:after {
 // -- Responsive table section end --
 // --------------------------------------------------------
 
+// Carousel section start
+.carousel-1 {
+    .account-card {
+        margin-right: 32px;
+    }
+}
+
+// Carousel section end
+
 // --------------------------------------------------------
 // Re-usable section end
 // --------------------------------------------------------
@@ -1885,6 +1895,7 @@ hr.divider:after {
 }
 
 .card-header {
+    border-radius: 10px !important;
     padding: 20px;
     background: var(--white);
     border-bottom: 1px solid var(--border-color1);
@@ -1966,11 +1977,7 @@ hr.divider:after {
     }
 }
 
-@media (max-width: 991px) {
-    .carousel-area1 .card-box {
-        margin-right: 32px;
-    }
-}
+@media (max-width: 991px) {}
 
 // Tab mobile view Card responsive end
 
@@ -3801,6 +3808,7 @@ Settings section start
         }
 
     }
+
     .sm-circle {
         font-size: 20px;
         height: 50px;
@@ -3848,18 +3856,21 @@ Settings section start
         width: 20px;
         height: 20px;
     }
-    .form-switch{
+
+    .form-switch {
         padding-left: 0;
         display: flex;
         align-items: center;
-        .form-check-label{
+
+        .form-check-label {
             width: 100%;
         }
-        .form-check-input{
+
+        .form-check-input {
             width: 50px;
             height: 25px;
         }
-    } 
+    }
 }
 
 .accordion-item {
@@ -3913,7 +3924,7 @@ Settings section start
     }
 }
 
-.list-container {
+.accordion-list-container {
     .list-item {
         &:not(:last-child) {
             border-bottom: 1px solid var(--border-color2);
@@ -3956,53 +3967,119 @@ Settings  end
 /*----------------------------------------------------
 Recipients section start
 ----------------------------------------------------*/
-.recipients-section{
-    .search-area{
+.recipients-section {
+    .search-area {
         display: flex;
-        .cmn-btn3{
+
+        .cmn-btn3 {
             margin-left: 10px;
         }
     }
 }
-.recipients-list-container{
-    margin-top: 30px;
-    .title{
+
+.list-container {
+
+    .title {
         border-bottom: 1px solid var(--border-color1);
         padding-bottom: 5px;
         margin-bottom: 15px;
-    }  
-    .item{
+    }
+
+    .item {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 15px;
         border-radius: 10px;
-        &:hover{
+
+        &:hover {
             background-color: var(--primary-color-opacity-low);
         }
-        .item-left{
+
+        .item-left {
             display: flex;
+            align-items: center;
         }
-        .item-right{
-            .icon-area{
+
+        .item-right {
+            .icon-area {
                 font-size: 22px;
             }
+            .content-area{
+                text-align: right;
+            }
         }
-        .thumb-area{
-            img{
+
+        .thumb-area {
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--heading-color);
+            font-size: 20px;
+            background-color: var(--primary-color-opacity-low);
+            img {
                 border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                min-width: 50px;
-                margin-right: 10px;
+                width: 45px;
+                height: 45px;
+                min-width: 45px;
                 border: 1px solid var(--border-color2);
             }
         }
-    }      
+    }
 }
+
 /*----------------------------------------------------
 Recipients section end
 ----------------------------------------------------*/
+
+/*----------------------------------------------------
+Account section start
+----------------------------------------------------*/
+.account-card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--primary-color-opacity-low);
+
+    .thumb-area {
+        margin-bottom: 30px;
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+    .content-area{
+        span{
+            text-transform: capitalize;
+        }
+    }
+}
+
+/*----------------------------------------------------
+Account section end
+----------------------------------------------------*/
+
+/*----------------------------------------------------
+transection-section end
+----------------------------------------------------*/
+.transection-section{
+    .search-area{
+        max-width: 550px;
+    }
+    h5{
+        text-transform: capitalize;
+    }
+    
+}
+/*----------------------------------------------------
+transection-section end
+----------------------------------------------------*/
+
 
 
 // ----------------------------------------------------

@@ -44,17 +44,6 @@ const toggleSideMenu = () => {
         el.addEventListener('scroll', listener)
     }
 
-    /**
-     * Sidebar toggle
-     */
-    // if (select('.toggle-sidebar-btn')) {
-    //     on('click', '.toggle-sidebar-btn', function (e) {
-    //         select('body').classList.toggle('toggle-sidebar')
-    //     })
-    // }
-
-
-
     // //  Search bar toggle
 
     if (select('.search-bar-toggle')) {
@@ -323,13 +312,27 @@ const body = document.querySelector("body");
 toggleBtn.addEventListener("click", function () {
     document.body.classList.toggle("dark-theme");
     if (document.body.classList.contains("dark-theme")) {
+        localStorage.setItem("dark-theme", 1);
+    } else {
+        localStorage.setItem("dark-theme", 0);
+    }
+    setTheme();
+});
+
+function setTheme() {
+    const isDarkTheme = localStorage.getItem("dark-theme");
+    if (isDarkTheme == 1) {
+        document.querySelector('body').classList.add('dark-theme');
         document.getElementById("moon").style.display = "none";
         document.getElementById("sun").style.display = "block";
     } else {
+        document.querySelector('body').classList.remove('dark-theme');
         document.getElementById("moon").style.display = "block";
         document.getElementById("sun").style.display = "none";
     }
-});
+}
+setTheme();
 // Dark theme end
+
 
 
