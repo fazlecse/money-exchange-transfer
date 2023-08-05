@@ -11,7 +11,7 @@
   --white: #ffffff;
   --soft-blue: #C1BFFD;
   --grayish-violet: #f5f4f7;
-  --soft-green: #ccf888;
+  --bright-yellow: #ECC53D;
   --dark-red: #a8200d;
   --lime-green: #40b781;
   --input-color: #F5F4F7;
@@ -873,10 +873,10 @@ body::-webkit-scrollbar-thumb {
 .search-box .search-btn {
   position: absolute;
   background-color: var(--primary-color);
-  width: 45px;
-  height: 90%;
+  width: 40px;
   border-radius: 8px;
-  right: 2px;
+  right: 3px;
+  height: calc(100% - 6px);
 }
 .search-box .search-btn i {
   color: var(--white);
@@ -3060,11 +3060,11 @@ hr.divider:after {
   }
 }
 .transections-section .section-header {
-  padding: 20px;
+  padding: 20px 0;
   margin-bottom: 0;
 }
 .transections-section .list-area {
-  border: 1px solid var(--border-color3);
+  border: 1px solid var(--border-color2);
   border-radius: 5px;
 }
 .transections-section .list-area li {
@@ -3242,10 +3242,14 @@ Recipients section start
   margin-left: 10px;
 }
 
-.list-container .title {
-  border-bottom: 1px solid var(--border-color1);
-  padding-bottom: 5px;
+.list-container .section-header-area {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color1);
+}
+.list-container .title {
+  padding-bottom: 5px;
 }
 .list-container .item {
   display: flex;
@@ -3314,7 +3318,7 @@ Account section start
 Account section end
 ----------------------------------------------------*/
 /*----------------------------------------------------
-transection-section end
+transection-section start
 ----------------------------------------------------*/
 .transection-section .search-area {
   max-width: 550px;
@@ -3325,6 +3329,110 @@ transection-section end
 
 /*----------------------------------------------------
 transection-section end
+----------------------------------------------------*/
+/*----------------------------------------------------
+Earn banner section start
+----------------------------------------------------*/
+.earn-banner-section {
+  background-color: var(--primary-color-opacity-low);
+  padding: 40px 30px;
+  border-radius: 15px;
+}
+.earn-banner-section .section-title {
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+.earn-banner-section .thumb-area {
+  text-align: center;
+  max-width: 220px;
+}
+.earn-banner-section .thumb-area img {
+  transform: rotate(5deg);
+}
+
+.share-links-section {
+  margin-top: 30px;
+}
+.share-links-section .share-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.share-links-section .copy-box {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.share-links-section .copy-box .form-control {
+  background-color: transparent;
+  border: 1px solid var(--heading-color);
+  padding-right: 62px;
+}
+.share-links-section .copy-box .form-control:focus {
+  border: 1px solid var(--primary-color);
+}
+.share-links-section .copy-box .copy-btn {
+  position: absolute;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  right: 3px;
+  height: calc(100% - 6px);
+  padding: 5px 10px;
+  color: var(--white);
+  font-weight: 500;
+}
+
+/*----------------------------------------------------
+Earn banner section end
+----------------------------------------------------*/
+/*----------------------------------------------------
+TheyGetYouGet sectionstart
+----------------------------------------------------*/
+.theygetyouget-card {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  height: 100%;
+}
+.theygetyouget-card .title {
+  color: var(--heading-color);
+  margin-bottom: 15px;
+}
+
+.instruction-container .item {
+  display: flex;
+}
+.instruction-container .item .icon-area {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.instruction-container .item .icon-area.yes {
+  color: var(--primary-color);
+}
+.instruction-container .item .icon-area.no {
+  color: var(--dark-red);
+}
+.instruction-container .item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/*----------------------------------------------------
+TheyGetYouGet section end
+----------------------------------------------------*/
+/*----------------------------------------------------
+Invited friend section section start
+----------------------------------------------------*/
+.invited-friend-section .list-container .item .thumb-area {
+  background-color: var(--bright-yellow);
+}
+.invited-friend-section .list-container .item .title {
+  text-transform: none;
+}
+
+/*----------------------------------------------------
+Invited friend section section end
 ----------------------------------------------------*/
 .pagination-section {
   margin-top: 50px;
