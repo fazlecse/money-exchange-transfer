@@ -148,8 +148,8 @@
                                         <div class="col-12">
                                             <label for="send" class="form-label">You send exactly</label>
                                             <div class="input-box">
-                                                <input type="email" class="form-control" id="send" />
-                                                <select class="cmn-select2" name="state">
+                                                <input type="text" class="form-control" id="send" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')"/>
+                                                <select class="cmn-select2-image" name="state">
                                                     <option value="gb">GBP</option>
                                                     <option value="bd">bdt</option>
                                                     <option value="us">usd</option>
@@ -177,8 +177,8 @@
                                         <div class="col-12">
                                             <label for="receive" class="form-label">Recipients gets</label>
                                             <div class="input-box">
-                                                <input type="email" class="form-control" id="receive" />
-                                                <select class="cmn-select2" name="state">
+                                                <input type="text" class="form-control" id="receive" onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')"/>
+                                                <select class="cmn-select2-image" name="state">
                                                     <option value="bd">BDT</option>
                                                     <option value="gb">GBP</option>
                                                     <option value="us">usd</option>

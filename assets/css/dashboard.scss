@@ -20,9 +20,7 @@
     --bg-color1: rgba(0, 153, 105, 0.1);
     --bg-color2: #F3F4F6;
     --bg-color3: #1E2022;
-    --bg-color4: #25282A;
-    --bg-color5: #242C2E;
-    --bg-color6: #2F3235;
+    --bg-color4: #273c57;
     --body-color: #707070;
     --border-color1: #f2f2f2;
     --border-color2: #e1e1e1;
@@ -219,7 +217,7 @@ textarea.form-control {
     box-shadow: none;
 }
 
-label {
+.form-label {
     text-transform: capitalize;
     margin-bottom: 5px;
 }
@@ -312,6 +310,12 @@ label {
     width: 100% !important;
 }
 
+img.img-flag {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color2);
+}
 
 .select2-container .select2-selection--single,
 .select2-container .select2-selection--multiple {
@@ -1622,6 +1626,55 @@ hr.divider:after {
 }
 
 // Carousel section end
+
+// Bootstrap datepicker start
+.datepicker-dropdown.datepicker-orient-top{
+    border: 1px solid var(--border-color3);
+    &::before{
+        border-top: 7px solid var(--border-color3);
+    }
+}
+.datepicker {
+
+
+    table {
+        tr {
+            th {
+                padding: 7px 15px;
+            }
+
+            td {
+                padding: 7px 15px;
+
+                &.active.active {
+                    background: var(--primary-color) !important;
+                }
+
+                span {
+                    &.active.active {
+                        background: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive bootstra datepicker start
+@media (max-width: 465px) {
+    .datepicker table tr {
+        th {
+            padding: 5px;
+        }
+
+        td {
+            padding: 5px;
+        }
+    }
+}
+
+// Responsive bootstra datepicker end
+// Bootstrap datepicker end
 
 // --------------------------------------------------------
 // Re-usable section end
@@ -4205,22 +4258,261 @@ TheyGetYouGet section end
 /*----------------------------------------------------
 Invited friend section section start
 ----------------------------------------------------*/
-.invited-friend-section{
-    .list-container{
-        .item{
-            .thumb-area{
+.invited-friend-section {
+    .list-container {
+        .item {
+            .thumb-area {
                 background-color: var(--bright-yellow);
             }
-            .title{
+
+            .title {
                 text-transform: none;
             }
 
-        } 
-    } 
+        }
+    }
 }
+
 /*----------------------------------------------------
 Invited friend section section end
 ----------------------------------------------------*/
+
+/*----------------------------------------------------
+Send section section end
+----------------------------------------------------*/
+// Tab section start
+.tab-section {
+    .nav-pills {
+        .nav-item {
+            width: 50%;
+        }
+
+        .nav-link {
+            border-bottom: 1px solid var(--border-color2);
+            border-radius: 0;
+            width: 100%;
+            font-size: 18px;
+            color: var(--heading-color);
+            transition: var(--transition);
+
+            &.active {
+                font-weight: 500;
+                background-color: transparent;
+                border-bottom: 2px solid var(--primary-color);
+            }
+        }
+    }
+}
+
+// Tab section end
+/*----------------------------------------------------
+Send section section end
+----------------------------------------------------*/
+
+/*----------------------------------------------
+Calculator section start
+----------------------------------------------*/
+.calculator {
+    padding: 10px;
+    border-radius: 15px;
+
+    .calculator-header {
+        margin-bottom: 20px;
+    }
+
+
+    .form-description {
+        margin: 15px 0;
+        font-size: 14px;
+
+        .single-description {
+            color: var(--lime-gray);
+
+            i {
+                margin-right: 5px;
+            }
+        }
+
+    }
+
+    .form-description .single-description {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+    }
+
+    .btn-area {
+        margin-top: 20px;
+    }
+
+}
+
+.input-box {
+    position: relative;
+
+    .form-control {
+        padding-right: 205px;
+    }
+
+    span.select2.select2-container.select2-container--default {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        max-width: 200px;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 95%;
+        position: absolute;
+        width: 200px;
+        right: 1px;
+        top: 1px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        background-color: var(--white);
+    }
+
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 5px;
+    }
+    
+    .select2-results__option {
+        text-transform: uppercase;
+    }
+
+
+
+}
+
+// Responsive calculator section start 
+@media (max-width: 1399px) {
+    .input-box {
+        .form-control {
+            padding-right: 155px;
+        }
+
+        span.select2.select2-container.select2-container--default {
+            max-width: 150px;
+
+            .select2-selection--single {
+                width: 150px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .calculator .form-description .single-description {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .input-box {
+        .form-control {
+            padding-right: 155px;
+        }
+
+        span.select2.select2-container.select2-container--default {
+            max-width: 150px;
+
+            .select2-selection--single {
+                width: 150px;
+            }
+        }
+    }
+
+
+}
+
+
+// Responsive calculator section end
+// Rtl calculator sectdion start 
+.rtl {
+    .input-box span.select2.select2-container.select2-container--default {
+        left: 2px;
+        right: auto;
+
+        .select2-selection--single {
+            justify-content: end;
+        }
+    }
+
+    .calculator .form-description .single-description:not(:first-child) {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+
+    .calculator .form-description .single-description:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .calculator .form-description .single-description i {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+}
+
+// Rtl calculator sectdion end
+/*----------------------------------------------
+Calculator end
+-----------------------------------------------*/
+
+/*----------------------------------------------
+Schedule component section start
+-----------------------------------------------*/
+.schedule-component-section {
+    margin-top: 20px;
+
+    .schedule-header {
+        margin-bottom: 20px;
+        display: flex;
+
+        .icon-area {
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--heading-color);
+            font-size: 20px;
+            background-color: var(--primary-color-opacity-low);
+        }
+
+    }
+
+    .schedule-form {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .date {
+            cursor: pointer;
+
+        }
+
+        .date-icon {
+            position: absolute;
+            right: 15px;
+        }
+
+
+    }
+}
+
+
+
+
+/*----------------------------------------------
+Schedule component section end
+-----------------------------------------------*/
 
 
 

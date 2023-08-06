@@ -167,17 +167,20 @@ $(document).ready(function () {
         });
     });
     // Testimonial section start
+    // cmn select2 start
+    $('.cmn-select2').select2({
 
+    });
+    // cmn select2 end
 
-    // cmn-select2
+    // cmn-select2 with image start
     $(document).ready(function () {
-        $('.cmn-select2').select2({
+        $('.cmn-select2-image').select2({
             templateResult: formatState,
             templateSelection: formatState
-
         });
     });
-    // select2 with image
+    // select2 function
     function formatState(state) {
         if (!state.id) {
             return state.text;
@@ -188,25 +191,28 @@ $(document).ready(function () {
         );
         return $state;
     };
-    function formatState (state) {
+    function formatState(state) {
         if (!state.id) {
-          return state.text;
+            return state.text;
         }
-      
+
         var baseUrl = "assets/img/mini-flag";
         var $state = $(
-          '<span><img class="img-flag" /> <span></span></span>'
+            '<span><img class="img-flag" /> <span></span></span>'
         );
-      
+
         // Use .text() instead of HTML string concatenation to avoid script injection issues
         $state.find("span").text(state.text);
         $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
-      
+
         return $state;
-      };
+    };
+    // cmn-select2 with image start
+    // cmn select2 modal start
     $(".modal-select").select2({
         dropdownParent: $("#formModal"),
     });
+    // cmn select2 modal start
 
 
 

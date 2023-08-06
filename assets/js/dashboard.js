@@ -237,30 +237,38 @@ const previewImage = (id) => {
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
+// cmn select2 start
+$('.cmn-select2').select2({
 
-// cmn-select2
-$(document).ready(function () {
-    $('.cmn-select2-dropdown').select2();
 });
+// cmn select2 end
+
+// cmn-select2-modal
 $(".modal-select").select2({
     dropdownParent: $("#formModal"),
 });
 
-// select2 with image
+// cmn-select2 with image start
+$(document).ready(function () {
+    $('.cmn-select2-image').select2({
+        templateResult: formatState,
+        templateSelection: formatState
+
+    });
+});
+
+// select2 function
 function formatState(state) {
     if (!state.id) {
         return state.text;
     }
-    var baseUrl = "../img/mini-flag";
+    var baseUrl = "assets/img/mini-flag";
     var $state = $(
         '<span><img src="' + baseUrl + '/' + state.element.value.toLowerCase() + '.svg" class="img-flag" /> ' + state.text + '</span>'
     );
     return $state;
 };
-// select2
-$(".js-example-basic-single").select2({
-    templateResult: formatState
-});
+// cmn-select2 with image start
 
 
 
@@ -286,6 +294,15 @@ $(document).ready(function () {
             }
         }
     });
+
+    // Bootstrap datepicker start
+    $('.date').datepicker({
+        // options here
+        format: 'dd/mm/yyyy',
+
+
+    });
+    // Bootstrap datepicker end
 
 
 

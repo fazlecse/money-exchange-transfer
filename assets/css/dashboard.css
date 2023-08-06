@@ -19,9 +19,7 @@
   --bg-color1: rgba(0, 153, 105, 0.1);
   --bg-color2: #F3F4F6;
   --bg-color3: #1E2022;
-  --bg-color4: #25282A;
-  --bg-color5: #242C2E;
-  --bg-color6: #2F3235;
+  --bg-color4: #273c57;
   --body-color: #707070;
   --border-color1: #f2f2f2;
   --border-color2: #e1e1e1;
@@ -203,7 +201,7 @@ textarea.form-control {
   box-shadow: none;
 }
 
-label {
+.form-label {
   text-transform: capitalize;
   margin-bottom: 5px;
 }
@@ -281,6 +279,13 @@ label {
 
 .select2 {
   width: 100% !important;
+}
+
+img.img-flag {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color2);
 }
 
 .select2-container .select2-selection--single,
@@ -1359,6 +1364,34 @@ hr.divider:after {
   margin-right: 32px;
 }
 
+.datepicker-dropdown.datepicker-orient-top {
+  border: 1px solid var(--border-color3);
+}
+.datepicker-dropdown.datepicker-orient-top::before {
+  border-top: 7px solid var(--border-color3);
+}
+
+.datepicker table tr th {
+  padding: 7px 15px;
+}
+.datepicker table tr td {
+  padding: 7px 15px;
+}
+.datepicker table tr td.active.active {
+  background: var(--primary-color) !important;
+}
+.datepicker table tr td span.active.active {
+  background: var(--primary-color);
+}
+
+@media (max-width: 465px) {
+  .datepicker table tr th {
+    padding: 5px;
+  }
+  .datepicker table tr td {
+    padding: 5px;
+  }
+}
 /* margin_top */
 .mt-10 {
   margin-top: 10px;
@@ -3434,6 +3467,175 @@ Invited friend section section start
 /*----------------------------------------------------
 Invited friend section section end
 ----------------------------------------------------*/
+/*----------------------------------------------------
+Send section section end
+----------------------------------------------------*/
+.tab-section .nav-pills .nav-item {
+  width: 50%;
+}
+.tab-section .nav-pills .nav-link {
+  border-bottom: 1px solid var(--border-color2);
+  border-radius: 0;
+  width: 100%;
+  font-size: 18px;
+  color: var(--heading-color);
+  transition: var(--transition);
+}
+.tab-section .nav-pills .nav-link.active {
+  font-weight: 500;
+  background-color: transparent;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/*----------------------------------------------------
+Send section section end
+----------------------------------------------------*/
+/*----------------------------------------------
+Calculator section start
+----------------------------------------------*/
+.calculator {
+  padding: 10px;
+  border-radius: 15px;
+}
+.calculator .calculator-header {
+  margin-bottom: 20px;
+}
+.calculator .form-description {
+  margin: 15px 0;
+  font-size: 14px;
+}
+.calculator .form-description .single-description {
+  color: var(--lime-gray);
+}
+.calculator .form-description .single-description i {
+  margin-right: 5px;
+}
+.calculator .form-description .single-description:not(:last-child) {
+  margin-right: 15px;
+}
+.calculator .btn-area {
+  margin-top: 20px;
+}
+
+.input-box {
+  position: relative;
+}
+.input-box .form-control {
+  padding-right: 205px;
+}
+.input-box span.select2.select2-container.select2-container--default {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  max-width: 200px;
+}
+.input-box .select2-container--default .select2-selection--single {
+  height: 95%;
+  position: absolute;
+  width: 200px;
+  right: 1px;
+  top: 1px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: var(--white);
+}
+.input-box .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 5px;
+}
+.input-box .select2-results__option {
+  text-transform: uppercase;
+}
+
+@media (max-width: 1399px) {
+  .input-box .form-control {
+    padding-right: 155px;
+  }
+  .input-box span.select2.select2-container.select2-container--default {
+    max-width: 150px;
+  }
+  .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
+    width: 150px;
+  }
+}
+@media (max-width: 1199px) {
+  .calculator .form-description .single-description {
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+  .input-box .form-control {
+    padding-right: 155px;
+  }
+  .input-box span.select2.select2-container.select2-container--default {
+    max-width: 150px;
+  }
+  .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
+    width: 150px;
+  }
+}
+.rtl .input-box span.select2.select2-container.select2-container--default {
+  left: 2px;
+  right: auto;
+}
+.rtl .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
+  justify-content: end;
+}
+.rtl .calculator .form-description .single-description:not(:first-child) {
+  margin-right: 0;
+  margin-left: 15px;
+}
+.rtl .calculator .form-description .single-description:not(:last-child) {
+  margin-right: 0;
+}
+.rtl .calculator .form-description .single-description i {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+/*----------------------------------------------
+Calculator end
+-----------------------------------------------*/
+/*----------------------------------------------
+Schedule component section start
+-----------------------------------------------*/
+.schedule-component-section {
+  margin-top: 20px;
+}
+.schedule-component-section .schedule-header {
+  margin-bottom: 20px;
+  display: flex;
+}
+.schedule-component-section .schedule-header .icon-area {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--heading-color);
+  font-size: 20px;
+  background-color: var(--primary-color-opacity-low);
+}
+.schedule-component-section .schedule-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.schedule-component-section .schedule-form .date {
+  cursor: pointer;
+}
+.schedule-component-section .schedule-form .date-icon {
+  position: absolute;
+  right: 15px;
+}
+
+/*----------------------------------------------
+Schedule component section end
+-----------------------------------------------*/
 .pagination-section {
   margin-top: 50px;
   display: flex;
