@@ -153,7 +153,7 @@ ol {
 
 body {
     font-family: var(--body-font);
-    line-height: 1.5;
+    line-height: 1.4;
     color: var(--body-color);
     font-size: 16px;
     overflow-x: hidden;
@@ -1628,12 +1628,14 @@ hr.divider:after {
 // Carousel section end
 
 // Bootstrap datepicker start
-.datepicker-dropdown.datepicker-orient-top{
+.datepicker-dropdown.datepicker-orient-top {
     border: 1px solid var(--border-color3);
-    &::before{
+
+    &::before {
         border-top: 7px solid var(--border-color3);
     }
 }
+
 .datepicker {
 
 
@@ -4278,8 +4280,13 @@ Invited friend section section end
 ----------------------------------------------------*/
 
 /*----------------------------------------------------
-Send section section end
+Transfer section section start
 ----------------------------------------------------*/
+.transfer-section {
+    max-width: 560px;
+    margin: auto;
+}
+
 // Tab section start
 .tab-section {
     .nav-pills {
@@ -4305,8 +4312,39 @@ Send section section end
 }
 
 // Tab section end
+// Transfer details section start
+.transfer-details-section {
+    .link {
+        color: var(--heading-color);
+    }
+}
+
+.transfer-list {
+    padding: 15px;
+    margin-bottom: 20px;
+
+    h5 {
+        margin-bottom: 0;
+    }
+
+    .title:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+// Transfer details section end
+
 /*----------------------------------------------------
-Send section section end
+Transfer section section end
 ----------------------------------------------------*/
 
 /*----------------------------------------------
@@ -4380,7 +4418,7 @@ Calculator section start
     .select2-container--default .select2-selection--single .select2-selection__arrow {
         top: 5px;
     }
-    
+
     .select2-results__option {
         text-transform: uppercase;
     }
@@ -4507,12 +4545,70 @@ Schedule component section start
     }
 }
 
-
-
-
 /*----------------------------------------------
 Schedule component section end
 -----------------------------------------------*/
+
+/*----------------------------------------------
+Payment section start
+-----------------------------------------------*/
+.payment-container-list {
+    margin-top: 20px;
+    height: 480px;
+    overflow: auto;
+    padding-right: 5px;
+
+    .item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .form-check-label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        cursor: pointer;
+        border: 1px solid var(--border-color2);
+        border-radius: 5px;
+        transition: var(--transition);
+
+
+        .image-area {
+            margin-right: 15px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+        .content-area{
+            max-width: 400px;
+            padding-right: 30px;
+        }
+    }
+
+    .form-check-input {
+        position: absolute;
+        right: 15px;
+    }
+
+    .form-check-input[type=radio]:checked+.form-check-label {
+        background-color: var(--primary-color-opacity-low);
+    }
+}
+
+
+/*----------------------------------------------
+Payment section end
+-----------------------------------------------*/
+
+
+
 
 
 

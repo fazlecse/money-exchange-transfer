@@ -248,113 +248,81 @@
     <main id="main" class="main ms-0">
         <div class="row">
             <div class="col-xxl-5 col-lg-8 mx-auto">
-                <div class="card">
-                    <div class="card-body">
-                        <!-- Transfer section start -->
-                        <div class="transfer-section">
-                            <h4 class="mb-20 text-center">Enter your account details</h4>
-                            <div class="col-12 mb-20">
-                                <label for="email" class="form-label">Their email</label>
-                                <input type="text" class="form-control" id="email" placeholder="example@mail.com">
-                            </div>
-                            <h6 class="mb-15">Bank details</h6>
-                            <!-- Tab section start -->
-                            <div class="tab-section">
-                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="LocalBankAccount-tab" data-bs-toggle="pill"
-                                            data-bs-target="#LocalBankAccount" type="button" role="tab"
-                                            aria-controls="LocalBankAccount" aria-selected="true">
-                                            Local bank account
-                                        </button>
+                <div class="transfer-section">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Transfer section start -->
+                            <h4 class="mb-20 text-center">Review details of your transfer</h4>
+                            <!-- Transfer details section start -->
+                            <div class="transfer-details-section">
+                                <ul class="transfer-list">
+                                    <li class="item title">
+                                        <h6>Transfer details</h6>
+                                        <h6><a href="" class="link">Edit</a></h6>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="bkashAccount-tab" data-bs-toggle="pill"
-                                            data-bs-target="#bkashAccount" type="button" role="tab"
-                                            aria-controls="bkashAccount" aria-selected="false">
-                                            bKash cccount
-                                        </button>
+                                    <li class="item">
+                                        <span>You send exactly</span>
+                                        <h5>100 USD</h5>
                                     </li>
+                                    <li class="item">
+                                        <span>Total fees (inclueded)</span>
+                                        <span>0.82 USD</span>
+                                    </li>
+                                    <li class="item">
+                                        <span>Total fees (inclueded)</span>
+                                        <span>0.82 USD</span>
+                                    </li>
+                                    <li class="item">
+                                        <h6><a href="" class="link" >Guaranteed rate (39 hours)</a></h6>
+                                        <span>10,890</span>
+                                    </li>
+                                    <li class="item">
+                                        <span>Md gets</span>
+                                        <h5>12,154 BDT</h5>
+                                    </li>
+                                    <hr>
+                                    <li class="item title">
+                                        <h6>Recipients details</h6>
+                                        <h6><a href="" class="link">Change</a></h6>
+                                    </li>
+                                    <li class="item">
+                                        <span>Name</span>
+                                        <span>Md Mahbub Alam</span>
+                                    </li>
+                                    <li class="item">
+                                        <span>Sent to</span>
+                                        <span>Wise account</span>
+                                    </li>
+                                    <li class="item title">
+                                        <h6>schedule details</h6>
+                                        <h6><a href="" class="link">Edit</a></h6>
+                                    </li>
+                                    <li class="item">
+                                        <span>Sending</span>
+                                        <span>Now</span>
+                                    </li>
+                                    <li class="item">
+                                        <span>Should arrive</span>
+                                        <span>in secondes</span>
+                                    </li>
+                                    <li class="item">
+                                        <span>Reports</span>
+                                        <span>Never</span>
+                                    </li>
+                                    <hr>
+                                    <li class="item title">
+                                        <h6>Reference for Md Mahbul Alam (optional)</h6>
+                                        <h6><a href="" class="link">Add</a></h6>
+                                    </li>
+
                                 </ul>
-                                <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="LocalBankAccount" role="tabpanel"
-                                        aria-labelledby="LocalBankAccount-tab" tabindex="0">
-                                        <div class="row g-4 mt-20">
-                                            <div class="col-12">
-                                                <label for="Full-name of-the-account-holder" class="form-label">Full
-                                                    name of the account holder</label>
-                                                <input type="text" class="form-control"
-                                                    id="Full-name of-the-account-holder">
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="form-label" for="bankName">bank name</label>
-                                                <select class="cmn-select2" name="state" id="bankName">
-                                                    <option value="AL">Please enter bank name</option>
-                                                    <option value="AL">Bangladesh</option>
-                                                    <option value="WY">Australia</option>
-                                                    <option value="WY">Belarus</option>
-                                                    <option value="WY">Canada</option>
-                                                    <option value="WY">China</option>
-                                                    <option value="WY">France</option>
-                                                    <option value="WY">Germany</option>
-                                                    <option value="WY">India</option>
-                                                    <option value="WY">Indonesia</option>
-                                                    <option value="WY">Italy</option>
-                                                    <option value="WY">Japan</option>
-                                                    <option value="WY">Korea</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="branchName" class="form-label">branch name</label>
-                                                <input type="text" class="form-control" id="branchName"
-                                                    placeholder="Please enter branche name">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="accountNumber" class="form-label">account number</label>
-                                                <input type="text" class="form-control" id="accountNumber"
-                                                    value="45531456555"
-                                                    onkeyup="this.value = this.value.replace (/^\.|[^\d\.]/g, '')">
-                                            </div>
-                                            <div class="col-12">
-                                                <h6 class="mt-20 mb-10">Recipient address</h6>
-                                                <label class="form-label" for="country">country</label>
-                                                <select class="cmn-select2" name="state" id="country">
-                                                    <option value="AL">Choose a country</option>
-                                                    <option value="AL">Bangladesh</option>
-                                                    <option value="WY">Australia</option>
-                                                    <option value="WY">Belarus</option>
-                                                    <option value="WY">Canada</option>
-                                                    <option value="WY">China</option>
-                                                    <option value="WY">France</option>
-                                                    <option value="WY">Germany</option>
-                                                    <option value="WY">India</option>
-                                                    <option value="WY">Indonesia</option>
-                                                    <option value="WY">Italy</option>
-                                                    <option value="WY">Japan</option>
-                                                    <option value="WY">Korea</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="city" class="form-label">city</label>
-                                                <input type="text" class="form-control" id="city">
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="RecipientAddress" class="form-label">Recipient address</label>
-                                                <input type="text" class="form-control" id="RecipientAddress">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="bkashAccount" role="tabpanel"
-                                        aria-labelledby="bkashAccount-tab" tabindex="0">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio veniam enim molestias quaerat amet dolore totam tempora eum inventore aliquam.
-                                    </div>
-                                </div>
-
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut qui commodi minima laudantium reiciendis nostrum amet expedita alias quos cum ducimus, consequatur delectus illum praesentium quam dolores dolor in.</span>
+                                <a href="" class="cmn-btn mt-20 w-100">confirm and continue</a>
                             </div>
-                            <!-- Tab section end -->
+                            <!-- Transfer details section end -->
+                           
+                            
                         </div>
-                        <!-- Transfer section end -->
                     </div>
                 </div>
             </div>

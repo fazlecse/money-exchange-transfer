@@ -1795,6 +1795,7 @@ Padding bottom
     transition: var(--transition);
     padding: 20px;
     z-index: 9999;
+    background-color: rgba(21, 39, 72, 0.5);
 
 
     .navbar-toggler {
@@ -1953,8 +1954,7 @@ Bottom Mobile, Tab nav end
 03. Hero section start
 ----------------------------------------------*/
 .hero-section {
-    // background-image: url(../img/hero/mid-img-2.jpg);
-    background-image: linear-gradient(rgba(2, 26, 46, 0.6), rgba(2, 25, 44, 0.6)), url(../img/hero/pexels-anete-lusina-6353681.jpg);
+    background-image: linear-gradient(90deg,rgba(2, 26, 46, 0.8), rgba(2, 25, 44, 0.5)), url(../img/hero/pexels-anete-lusina-6353681.jpg);
     padding: 200px 0;
     background-size: cover;
     background-position: center;
@@ -2005,6 +2005,8 @@ Hero end
 04. Calculator section start
 ----------------------------------------------*/
 .calculator {
+    max-width: 560px;
+    margin: 0 auto;
     background-color: var(--bg-color4);
     padding: 30px;
     border-radius: 15px;
