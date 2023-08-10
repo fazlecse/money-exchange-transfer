@@ -299,10 +299,12 @@ $(document).ready(function () {
     $('.date').datepicker({
         // options here
         format: 'dd/mm/yyyy',
+        
 
 
     });
     // Bootstrap datepicker end
+    //Multi step progress section start
 
 
 

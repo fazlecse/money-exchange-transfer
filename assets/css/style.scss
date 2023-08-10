@@ -739,10 +739,12 @@ body::-webkit-scrollbar-thumb {
 .owl-theme .owl-dots .owl-dot span {
     transition: all 0.5s ease-in-out;
 }
+
 // Modal section start 
-.modal-header{
+.modal-header {
     border-bottom: 1px solid var(--border-color1);
 }
+
 // Modal section end
 /*----------------------------------------------
 Reset end
@@ -750,7 +752,7 @@ Reset end
 
 
 /*----------------------------------------------
-Reuseble style section start
+Reusable style section start
 ----------------------------------------------*/
 // Search box section start 
 .search-box {
@@ -808,20 +810,26 @@ Reuseble style section start
 Offcanvas section start 
 ----------------------------------------------*/
 .offcanvas {
-    background: var(--bg-color1);
+    background: var(--bg-color3);
 }
 
 .offcanvas.offcanvas-end {
     border-left: 1px solid var(--border-color3);
+    transition: transform 0.5s ease 0.4s;
 }
 
 .offcanvas-backdrop {
-    background-color: #e4ebf87a;
+    background-color: rgba(228, 235, 248, 0.478);
     backdrop-filter: blur(8.8px);
+    right: 0;
+    width: 0;
+    left: auto;
+    transition: all 0.8s ease-out;
 }
 
 .offcanvas-backdrop.show {
     opacity: 1;
+    width: 100%;
 }
 
 /*----------------------------------------------
@@ -1503,6 +1511,9 @@ hr.divider:after {
 }
 
 /*----------------------------------------------
+Reusable style section end
+----------------------------------------------*/
+/*----------------------------------------------
 Margin top start
 ----------------------------------------------*/
 
@@ -1785,9 +1796,9 @@ Padding bottom
     z-index: 999;
     padding: 20px 0;
 
-    .navbar-nav .nav-link {
-        color: var(--heading-color);
-    }
+    // .navbar-nav .nav-link {
+    //     color: var(--heading-color);
+    // }
 
 }
 
@@ -1858,6 +1869,11 @@ Padding bottom
 @media (min-width: 992px) {
     .navbar {
         padding: 20px 0;
+        &.active{
+            .navbar-nav .nav-link{
+                color: var(--heading-color);
+            }
+        }
     }
 
     .navbar-expand-lg .navbar-toggler {
@@ -1954,7 +1970,7 @@ Bottom Mobile, Tab nav end
 03. Hero section start
 ----------------------------------------------*/
 .hero-section {
-    background-image: linear-gradient(90deg,rgba(2, 26, 46, 0.8), rgba(2, 25, 44, 0.5)), url(../img/hero/pexels-anete-lusina-6353681.jpg);
+    background-image: linear-gradient(90deg, rgba(2, 26, 46, 0.8), rgba(2, 25, 44, 0.5)), url(../img/hero/pexels-anete-lusina-6353681.jpg);
     padding: 200px 0;
     background-size: cover;
     background-position: center;
@@ -2011,18 +2027,25 @@ Hero end
     padding: 30px;
     border-radius: 15px;
     box-shadow: var(--shadow1);
-    h4{
+
+    h4 {
         color: var(--white);
     }
-    p{
+
+    p {
         color: var(--lime-gray);
     }
-    .form-label{
+
+    .form-label {
         color: var(--white);
     }
 
     .calculator-header {
         margin-bottom: 20px;
+    }
+
+    .form-control {
+        height: 55px;
     }
 
 
@@ -2032,6 +2055,7 @@ Hero end
 
         .single-description {
             color: var(--lime-gray);
+
             i {
                 margin-right: 5px;
             }
@@ -2068,20 +2092,23 @@ Hero end
     }
 
     .select2-container--default .select2-selection--single {
-        height: 95%;
+        height: calc(100% - 8px);
         position: absolute;
         width: 200px;
-        right: 1px;
-        top: 1px;
+        right: 4px;
+        top: 50%;
         border-radius: 5px;
         display: flex;
         align-items: center;
         text-transform: uppercase;
+        transform: translateY(-50%);
+        border: 1px solid var(--border-color2);
+        box-shadow: var(--shadow2);
     }
 
 
     .select2-container--default .select2-selection--single .select2-selection__arrow {
-        top: 5px;
+        top: 10px;
     }
 
 
@@ -2128,6 +2155,13 @@ Hero end
                 width: 150px;
             }
         }
+    }
+
+
+}
+@media (max-width: 575px) {
+    .calculator{
+        padding: 20px;
     }
 
 

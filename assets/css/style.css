@@ -673,7 +673,7 @@ body::-webkit-scrollbar-thumb {
 Reset end
 ----------------------------------------------*/
 /*----------------------------------------------
-Reuseble style section start
+Reusable style section start
 ----------------------------------------------*/
 .search-box {
   position: relative;
@@ -715,21 +715,27 @@ Reuseble style section start
 Offcanvas section start 
 ----------------------------------------------*/
 .offcanvas {
-  background: var(--bg-color1);
+  background: var(--bg-color3);
 }
 
 .offcanvas.offcanvas-end {
   border-left: 1px solid var(--border-color3);
+  transition: transform 0.5s ease 0.4s;
 }
 
 .offcanvas-backdrop {
-  background-color: rgba(228, 235, 248, 0.4784313725);
+  background-color: rgba(228, 235, 248, 0.478);
   -webkit-backdrop-filter: blur(8.8px);
           backdrop-filter: blur(8.8px);
+  right: 0;
+  width: 0;
+  left: auto;
+  transition: all 0.8s ease-out;
 }
 
 .offcanvas-backdrop.show {
   opacity: 1;
+  width: 100%;
 }
 
 /*----------------------------------------------
@@ -1317,6 +1323,9 @@ hr.divider:after {
 }
 
 /*----------------------------------------------
+Reusable style section end
+----------------------------------------------*/
+/*----------------------------------------------
 Margin top start
 ----------------------------------------------*/
 .mt-10 {
@@ -1593,9 +1602,6 @@ Padding bottom
   z-index: 999;
   padding: 20px 0;
 }
-.navbar.active .navbar-nav .nav-link {
-  color: var(--heading-color);
-}
 
 .navbar {
   transition: var(--transition);
@@ -1651,6 +1657,9 @@ Padding bottom
 @media (min-width: 992px) {
   .navbar {
     padding: 20px 0;
+  }
+  .navbar.active .navbar-nav .nav-link {
+    color: var(--heading-color);
   }
   .navbar-expand-lg .navbar-toggler {
     display: none !important;
@@ -1776,6 +1785,9 @@ Hero end
 .calculator .calculator-header {
   margin-bottom: 20px;
 }
+.calculator .form-control {
+  height: 55px;
+}
 .calculator .form-description {
   margin: 15px 0;
   font-size: 14px;
@@ -1807,18 +1819,21 @@ Hero end
   max-width: 200px;
 }
 .input-box .select2-container--default .select2-selection--single {
-  height: 95%;
+  height: calc(100% - 8px);
   position: absolute;
   width: 200px;
-  right: 1px;
-  top: 1px;
+  right: 4px;
+  top: 50%;
   border-radius: 5px;
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  transform: translateY(-50%);
+  border: 1px solid var(--border-color2);
+  box-shadow: var(--shadow2);
 }
 .input-box .select2-container--default .select2-selection--single .select2-selection__arrow {
-  top: 5px;
+  top: 10px;
 }
 
 .select2-results__option {
@@ -1850,6 +1865,11 @@ Hero end
   }
   .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
     width: 150px;
+  }
+}
+@media (max-width: 575px) {
+  .calculator {
+    padding: 20px;
   }
 }
 .rtl .input-box span.select2.select2-container.select2-container--default {
