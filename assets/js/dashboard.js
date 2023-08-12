@@ -277,7 +277,7 @@ $(document).ready(function () {
     // owl carousel dashboard card
     $('.carousel-1').owlCarousel({
         loop: true,
-        autoplay: false,
+        // autoplay: true,
         margin: -20,
         nav: false,
         dots: false,

@@ -3285,8 +3285,8 @@ Pagination end
 }
 @media (max-width: 575px) {
   .error-section {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
   }
 }
 /*----------------------------------------------

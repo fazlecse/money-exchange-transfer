@@ -1338,6 +1338,11 @@ hr.divider:after {
   margin-right: 32px;
 }
 
+.rtl .carousel-1 .account-card {
+  margin-right: 0;
+  margin-left: 32px;
+}
+
 .datepicker-dropdown.datepicker-orient-top {
   border: 1px solid var(--border-color3);
 }
@@ -1760,6 +1765,9 @@ Card section start
 }
 
 @media (max-width: 575px) {
+  .card-header {
+    padding: 10px;
+  }
   .card-body {
     padding: 10px;
   }
@@ -1906,7 +1914,7 @@ Card section end
   }
 }
 .logo {
-  min-width: 130px;
+  min-width: 150px;
   max-width: 150px;
   margin-right: 6px;
 }
@@ -1994,10 +2002,6 @@ Card section end
   font-size: 20px;
 }
 
-.rtl .header {
-  padding-left: 0;
-  padding-right: 20px;
-}
 .rtl .header .search-form button {
   margin-left: 0;
   margin-right: -30px;
@@ -3035,8 +3039,10 @@ Cmn table start
   .table-responsive .table tbody tr {
     display: block;
     border: 1px solid var(--border-color2);
-    margin: 5px 0;
     border-radius: 5px;
+  }
+  .table-responsive .table tbody tr:not(:last-child) {
+    margin-bottom: 5px;
   }
   .table-responsive .table tbody tr td {
     display: flex;
@@ -3370,6 +3376,20 @@ Settings section start
   padding: 15px 0;
 }
 
+@media (max-width: 575px) {
+  .settings-accordion .accordion-button {
+    padding: 7px;
+  }
+  .settings-accordion .accordion-body {
+    padding: 10px;
+  }
+  .settings-accordion .sm-circle {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    margin-right: 10px;
+  }
+}
 .rtl .accordion-button {
   text-align: right;
   padding: 10px;
@@ -3387,9 +3407,7 @@ Recipients section start
 ----------------------------------------------------*/
 .recipients-section .search-area {
   display: flex;
-}
-.recipients-section .search-area .cmn-btn3 {
-  margin-left: 10px;
+  gap: 10px;
 }
 
 .list-container .link {
@@ -3410,7 +3428,6 @@ Recipients section start
   justify-content: space-between;
   padding: 15px;
   border-radius: 10px;
-  gap: 10px;
 }
 .list-container .item:hover {
   background-color: var(--primary-color-opacity-low);
@@ -3456,9 +3473,17 @@ Recipients section start
     height: 40px;
     min-width: 40px;
     min-height: 40px;
-    margin-right: 5px;
+    margin-right: 10px;
   }
 }
+.rtl .list-container .item .thumb-area {
+  margin-right: 0;
+  margin-left: 15px;
+}
+.rtl .list-container .item .item-right .icon-area i {
+  transform: rotate(180deg);
+}
+
 /*----------------------------------------------------
 Recipients section end
 ----------------------------------------------------*/
@@ -3562,11 +3587,20 @@ Earn banner section start
     flex-direction: column;
   }
 }
+.rtl .share-links-section .copy-box .form-control {
+  padding-right: 7px;
+  padding-left: 62px;
+}
+.rtl .share-links-section .copy-box .copy-btn {
+  left: 3px;
+  right: auto;
+}
+
 /*----------------------------------------------------
 Earn banner section end
 ----------------------------------------------------*/
 /*----------------------------------------------------
-TheyGetYouGet sectionstart
+TheyGetYouGet section start
 ----------------------------------------------------*/
 .theygetyouget-card {
   background-color: var(--white);
@@ -3581,10 +3615,10 @@ TheyGetYouGet sectionstart
 
 .instruction-container .item {
   display: flex;
+  gap: 10px;
 }
 .instruction-container .item .icon-area {
   font-size: 20px;
-  margin-right: 10px;
 }
 .instruction-container .item .icon-area.yes {
   color: var(--primary-color);

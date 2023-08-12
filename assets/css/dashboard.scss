@@ -1578,6 +1578,18 @@ hr.divider:after {
     }
 }
 
+// Rtl carousel-1 start
+.rtl {
+    .carousel-1 {
+        .account-card {
+            margin-right: 0;
+            margin-left: 32px;
+        }
+
+    }
+}
+
+// Rtl carousel-1 end
 // Carousel section end
 
 // Bootstrap datepicker start
@@ -2048,6 +2060,10 @@ Card section start
 
 // Responsive card start
 @media (max-width: 575px) {
+    .card-header {
+        padding: 10px;
+    }
+
     .card-body {
         padding: 10px;
     }
@@ -2282,7 +2298,7 @@ Card section end
 }
 
 .logo {
-    min-width: 130px;
+    min-width: 150px;
     max-width: 150px;
     margin-right: 6px;
 }
@@ -2376,8 +2392,6 @@ Card section end
 
 // Header rtl start
 .rtl .header {
-    padding-left: 0;
-    padding-right: 20px;
 
     .search-form button {
         margin-left: 0;
@@ -3646,8 +3660,12 @@ Cmn table start
     .table-responsive .table tbody tr {
         display: block;
         border: 1px solid var(--border-color2);
-        margin: 5px 0;
         border-radius: 5px;
+    }
+
+
+    .table-responsive .table tbody tr:not(:last-child) {
+        margin-bottom: 5px;
     }
 
     .table-responsive .table tbody tr td {
@@ -4127,6 +4145,27 @@ Settings section start
     }
 }
 
+// Responsive setting section start
+@media (max-width: 575px) {
+    .settings-accordion {
+        .accordion-button {
+            padding: 7px;
+        }
+
+        .accordion-body {
+            padding: 10px;
+        }
+
+        .sm-circle {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            margin-right: 10px;
+        }
+    }
+}
+
+// Responsive setting section end
 // Faq rtl start
 .rtl {
     .accordion-button {
@@ -4150,10 +4189,8 @@ Recipients section start
 .recipients-section {
     .search-area {
         display: flex;
+        gap: 10px;
 
-        .cmn-btn3 {
-            margin-left: 10px;
-        }
     }
 }
 
@@ -4180,7 +4217,6 @@ Recipients section start
         justify-content: space-between;
         padding: 15px;
         border-radius: 10px;
-        gap: 10px;
 
         &:hover {
             background-color: var(--primary-color-opacity-low);
@@ -4225,20 +4261,44 @@ Recipients section start
         }
     }
 }
+
 // Responsive recipient section start
-@media (max-width: 350px){
+@media (max-width: 350px) {
     .list-container .item {
         padding: 10px;
-        .thumb-area{
+
+        .thumb-area {
             width: 40px;
             height: 40px;
             min-width: 40px;
             min-height: 40px;
-            margin-right: 5px;
+            margin-right: 10px;
         }
     }
 }
+
 // Responsive recipient section end
+// Rtl recipient sectioin start
+.rtl {
+    .list-container {
+        .item {
+            .thumb-area {
+                margin-right: 0;
+                margin-left: 15px;
+            }
+
+            .item-right {
+                .icon-area {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Rtl recipient sectioin end
 /*----------------------------------------------------
 Recipients section end
 ----------------------------------------------------*/
@@ -4355,23 +4415,42 @@ Earn banner section start
 }
 
 // Responsive earn banner section start
-@media (max-width: 767px){
-    .earn-banner-section .section-title{
+@media (max-width: 767px) {
+    .earn-banner-section .section-title {
         font-size: 40px;
     }
 }
-@media (max-width: 575px){
-    .share-links-section .share-links{
+
+@media (max-width: 575px) {
+    .share-links-section .share-links {
         flex-direction: column;
     }
 }
+
 // Responsive earn banner section end
+// Rtl earn banner section start
+.rtl {
+    .share-links-section {
+        .copy-box {
+            .form-control{
+                padding-right: 7px;
+                padding-left: 62px;
+            }
+            .copy-btn {
+                left: 3px;
+                right: auto;
+            }
+        }
+    }
+}
+
+// Rtl earn banner section end
 /*----------------------------------------------------
 Earn banner section end
 ----------------------------------------------------*/
 
 /*----------------------------------------------------
-TheyGetYouGet sectionstart
+TheyGetYouGet section start
 ----------------------------------------------------*/
 
 .theygetyouget-card {
@@ -4389,10 +4468,10 @@ TheyGetYouGet sectionstart
 .instruction-container {
     .item {
         display: flex;
+        gap: 10px;
 
         .icon-area {
             font-size: 20px;
-            margin-right: 10px;
         }
 
         .icon-area.yes {
@@ -4408,7 +4487,8 @@ TheyGetYouGet sectionstart
         margin-bottom: 15px;
     }
 }
-
+// Rtl TheyGetYouGet section start
+// Rtl TheyGetYouGet section end
 /*----------------------------------------------------
 TheyGetYouGet section end
 ----------------------------------------------------*/

@@ -46,13 +46,13 @@
                     <img src="assets/img/logo/logo.png" alt="">
                 </a>
             </div>
-            <button onclick="toggleSideMenu()" class="toggle-sidebar-btn d-none d-lg-block"><i
+            <button onclick="toggleSideMenu()" class="toggle-sidebar-btn d-none"><i
                     class="fa-light fa-list"></i></button>
         </div>
         <!-- End Logo -->
 
         <!-- Multi step progress section start -->
-        <div class="multi-step-progress-section">
+        <div class="multi-step-progress-section d-none d-sm-block">
             <ul class="multi-step-list">
                 <li class="item active">
                     <a href="user-panel-transfer-amount.html" class="progress-link">
@@ -266,10 +266,10 @@
         </li>
     </ul>
     <!-- Bottom Mobile Tab nav section end -->
+    
     <!-- Sidebar section start -->
     <aside id="sidebar" class="sidebar d-lg-none">
         <ul class="sidebar-nav" id="sidebar-nav">
-
             <li class="nav-item">
                 <a class="nav-link active" href="user-panel.html">
                     <i class="fa-light fa-grid"></i>
@@ -339,6 +339,40 @@
     <main id="main" class="main ms-0">
         <div class="row">
             <div class="col-xxl-5 col-lg-8 mx-auto">
+                <div class="card d-sm-none mb-10">
+                    <div class="card-body">
+                        <!-- Multi step progress section start -->
+                        <div class="multi-step-progress-section">
+                            <ul class="multi-step-list">
+                                <li class="item active">
+                                    <a href="user-panel-transfer-amount.html" class="progress-link">
+                                        <div class="number">1</div>
+                                        <div class="title">amount</div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="user-panel-transfer-recipients.html" class="progress-link">
+                                        <div class="number">2</div>
+                                        <div class="title">Recipient</div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="user-panel-transfer-review.html" class="progress-link">
+                                        <div class="number">3</div>
+                                        <div class="title">review</div>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="user-panel-transfer-pay.html" class="progress-link">
+                                        <div class="number">4</div>
+                                        <div class="title">pay</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Multi step progress section end -->
+                    </div>
+                </div>
                 <!-- Transfer section start -->
                 <div class="transfer-section">
                     <div class="card">
