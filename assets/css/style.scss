@@ -13,19 +13,22 @@ Version       : 1.0
 01. Nav section start
 02. Bottom Mobile, Tab nav section start
 03. Hero section start
-04. Feature section start
-05. About section start
-06. How it works section start
-07. Testimonial section start
-08. How it works section start
-09. Faq section start
-10. Blog section start
-11. Footer section start
+04. Calculator section start
+05. Feature section start
+06. About section start
+07. How it works section start
+08. Why choose us section start
+09. Testimonial section start
+10. Faq section start
+11. Blog section start
+12. Newsletter section start
+13. Country support section start
+14. Footer section start
 12. Copyright section start
 13. Banner section start
 14. Docs banner section start
-15. Developer section start
-16. Docs section start 
+15. Copyright section start
+16. Banner section start
 17. Contact section start
 18. Login Signup section start
 19. Blog details section start
@@ -1869,8 +1872,9 @@ Padding bottom
 @media (min-width: 992px) {
     .navbar {
         padding: 20px 0;
-        &.active{
-            .navbar-nav .nav-link{
+
+        &.active {
+            .navbar-nav .nav-link {
                 color: var(--heading-color);
             }
         }
@@ -2159,8 +2163,9 @@ Hero end
 
 
 }
+
 @media (max-width: 575px) {
-    .calculator{
+    .calculator {
         padding: 20px;
     }
 
@@ -2171,8 +2176,24 @@ Hero end
 // Responsive calculator section end
 // Rtl calculator sectdion start 
 .rtl {
+    .input-box {
+        .form-control {
+            padding-right: .75rem;
+            padding-left: 205px;
+        }
+
+        span.select2.select2-container.select2-container--default {
+            left: 6px;
+            right: auto;
+
+            .select2-selection--single {
+                justify-content: end;
+            }
+        }
+    }
+
     .input-box span.select2.select2-container.select2-container--default {
-        left: 2px;
+        left: 6px;
         right: auto;
 
         .select2-selection--single {
@@ -2193,6 +2214,12 @@ Hero end
         margin-right: 0;
         margin-left: 5px;
     }
+
+    @media (max-width: 1399px) {
+        .input-box .form-control {
+            padding-left: 155px;
+        }
+    }
 }
 
 // Rtl calculator sectdion end
@@ -2201,7 +2228,7 @@ Calculator end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-04. Feature section start
+05. Feature section start
 ----------------------------------------------*/
 
 .icon-box {
@@ -2267,7 +2294,7 @@ Feature end
 
 
 /*----------------------------------------------
-05. About section start
+06. About section start
 ----------------------------------------------*/
 .about-section {
     background-color: var(--bg-color1);
@@ -2306,7 +2333,7 @@ About end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-06. How it works section start
+07. How it works section start
 ----------------------------------------------*/
 .how-it-work {
 
@@ -2342,7 +2369,7 @@ How it works end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-07. Why choose us section start
+08. Why choose us section start
 ----------------------------------------------*/
 .why-choose-us {
     background-color: var(--bg-color1);
@@ -2377,11 +2404,11 @@ How it works end
 
 // Rtl why choose us section start
 /*----------------------------------------------
-07. Why choose us end
+Why choose us end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-07. Testimonial section start
+09. Testimonial section start
 ----------------------------------------------*/
 .testimonial-section {
     .testimonial-box {
@@ -2449,7 +2476,7 @@ Testimonial end
 
 
 /*----------------------------------------------
-09. Faq section start
+10. Faq section start
 ----------------------------------------------*/
 
 .faq-section {
@@ -2539,7 +2566,7 @@ Faq end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-10. Blog section start
+11. Blog section start
 ----------------------------------------------*/
 
 .blog-box {
@@ -2705,7 +2732,7 @@ Blog end
 
 
 /*----------------------------------------------
-11. Newsletter section start
+12. Newsletter section start
 ----------------------------------------------*/
 .newsletter-section {
     background-color: var(--bg-color1);
@@ -2833,7 +2860,33 @@ Newsletter end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-12. Footer section start
+13. Country support section start
+----------------------------------------------*/
+.country-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 99999px;
+    box-shadow: var(--shadow3);
+
+    .thumb-area {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+
+/*----------------------------------------------
+Country support section start
+----------------------------------------------*/
+
+/*----------------------------------------------
+14. Footer section start
 ----------------------------------------------*/
 
 .footer-section {
@@ -2966,7 +3019,7 @@ Footer end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-12. Copyright section start
+15. Copyright section start
 ----------------------------------------------*/
 
 .copyright-area {
@@ -3019,12 +3072,8 @@ Copyright end
 ----------------------------------------------*/
 
 /*----------------------------------------------
-13. Banner section start
+16. Banner section start
 ----------------------------------------------*/
-.banner-nav {
-    background: transparent;
-}
-
 .banner-area {
     padding-top: 220px;
     padding-bottom: 100px;
@@ -3069,409 +3118,6 @@ Copyright end
 
 /*----------------------------------------------
 Banner end
-----------------------------------------------*/
-
-/*----------------------------------------------
-14. Docs banner section start
-----------------------------------------------*/
-.docs-banner {
-    padding: 100px 0 150px;
-    background: linear-gradient(rgb(245 249 255 / 90%), rgb(220 234 255)), url(../img/banner/group-photo-bro.png);
-    background-size: cover;
-    background-position: top;
-}
-
-/*----------------------------------------------
-Docs banner end
-----------------------------------------------*/
-
-/*----------------------------------------------
-15. Developer section start
-----------------------------------------------*/
-.developer-section {
-    background-color: var(--bg-color1);
-
-    .docs-inner {
-        margin-top: -130px;
-    }
-}
-
-.docs-card {
-    background-color: var(--white);
-    border-radius: 15px;
-    box-shadow: var(--shadow3);
-    transition: var(--transition);
-
-    &:hover {
-        box-shadow: none;
-    }
-
-    .docs-header {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        padding: 20px;
-        background: linear-gradient(rgba(245, 249, 255, 0.9), rgb(220, 234, 255));
-    }
-
-    .docs-body {
-        padding: 20px;
-    }
-
-}
-
-/*----------------------------------------------
-Developer end
-----------------------------------------------*/
-
-/*----------------------------------------------
-16. Docs section start 
-----------------------------------------------*/
-.docs-nav {
-    box-shadow: var(--shadow2);
-    background-color: var(--white);
-}
-
-.docs-section-title {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border-color2);
-}
-
-.docs-title {
-    padding: 20px 0;
-}
-
-.docs-section {
-    padding: 20px 0;
-}
-
-.docs-link {
-    text-decoration: underline;
-    color: var(--primary-color);
-}
-
-.language-bash {
-    background-color: var(--bg-color2);
-    border-radius: 5px;
-    position: relative;
-
-    &:hover .copy-code {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .line-numbers-rows {
-        position: absolute;
-        color: #9e9e9e;
-        left: 0;
-        top: 15px;
-        border-right: 1px solid #9e9e9e;
-        width: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--bg-color2);
-        font-size: 14px;
-
-        span {
-            display: block;
-        }
-
-    }
-
-    .docs-pre {
-        padding: 0 0 0 30px;
-    }
-
-    .copy-code {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background-color: var(--bg-color4);
-        width: 30px;
-        height: 30px;
-        border-radius: 5px;
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        border: 1px solid transparent;
-
-        &:hover {
-            border: 1px solid var(--border-color2);
-        }
-    }
-}
-
-// Sidebar section start
-
-
-.cmn-btn-close {
-    font-size: 18px;
-    background: var(--primary-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    color: var(--white);
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    box-shadow: none;
-}
-
-.sidebar-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    color: var(--white);
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidebar-section {
-    background-color: var(--bg-color1);
-    box-shadow: var(--shadow2);
-    width: 300px;
-    height: 100%;
-    padding: 20px;
-    position: fixed;
-    padding-top: 95px;
-    transition: var(--transition);
-    z-index: 1;
-
-    .nav-area {
-        overflow-y: auto;
-        height: 100%;
-
-        .nav-item {
-            .nav-content {
-                margin-left: 30px;
-
-                li {
-                    a {
-                        padding: 5px;
-                        display: flex;
-                        align-items: center;
-                        font-size: 14px;
-
-                        &.active {
-                            color: var(--primary-color);
-                        }
-
-                        i {
-                            font-size: 8px;
-                            margin-right: 5px;
-                            border-radius: 50%;
-                        }
-
-                    }
-                }
-            }
-        }
-
-        .nav-link {
-            color: var(--heading-color);
-            display: flex;
-            align-items: center;
-            padding: 5px 0;
-            font-size: 14px;
-
-            &:hover {
-                color: var(--primary-color);
-            }
-
-            i {
-                transition: transform 0.2s ease-in-out;
-                width: 18px;
-                height: 18px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 12px;
-                border-radius: 5px;
-            }
-
-            i.first {
-                margin-right: 5px;
-            }
-
-            i.last {
-                margin-left: auto;
-                background-color: var(--white);
-            }
-
-            &:not(.collapsed) i.last {
-                transform: rotate(180deg);
-            }
-        }
-    }
-
-    .toggle-sidebar-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: -35px;
-        width: 35px;
-        height: 35px;
-        background-color: var(--bg-color1);
-    }
-}
-
-// Sidebar section end
-.hljs {
-    background-color: transparent;
-}
-
-main {
-    width: calc(100% - 300px);
-    margin-left: auto;
-
-    .main-inner {
-        max-width: 1000px;
-        margin: auto;
-        padding: 50px;
-        margin-top: 75px;
-    }
-
-    .main-wrapper {
-        padding-top: 75px;
-    }
-
-    .content-side {
-        padding: 20px;
-        overflow-y: auto;
-    }
-
-    .editor-side {
-        overflow-y: auto;
-        background-color: var(--bg-color2);
-
-        .editor-header {
-            background-color: var(--bg-color3);
-            position: sticky;
-            top: 0;
-            z-index: 1;
-
-            .editor-title {
-                color: var(--white);
-                padding: 20px;
-                border-bottom: 1px solid var(--border-color3);
-            }
-
-        }
-
-        .language-bash {
-            border-radius: 0;
-        }
-    }
-}
-
-// Responsive docs section start
-@media (min-width: 1200px) {
-    .main-wrapper {
-        display: flex;
-    }
-
-    .content-side {
-        width: 50%;
-        height: calc(100vh - 75px);
-    }
-
-    .editor-side {
-        width: 50%;
-        height: calc(100vh - 75px);
-    }
-}
-
-@media (max-width: 991px) {
-    .sidebar-section {
-        left: -300px;
-    }
-
-    main {
-        width: 100%;
-    }
-
-    .toggle-sidebar {
-        .sidebar-section {
-            left: 0;
-        }
-    }
-}
-
-@media (max-width: 575px) {
-    main {
-        .main-inner {
-            padding: 20px;
-        }
-    }
-
-}
-
-// Responsive docs section start
-// Rtl docs start
-.rtl {
-    .sidebar-section {
-        .nav-area {
-            .nav-link {
-                i.first {
-
-                    margin-right: 0;
-                    margin-left: 5px;
-                }
-
-                i.last {
-                    margin-left: 0;
-                    margin-right: auto;
-                }
-            }
-
-        }
-
-        .nav-item .nav-content {
-            li a i {
-                margin-right: 0;
-                margin-left: 5px;
-            }
-
-            margin-left: 0;
-            margin-right: 30px;
-        }
-    }
-
-    main {
-        margin-left: 0;
-        margin-right: auto;
-    }
-
-    .language-bash {
-        .docs-pre {
-            padding: 0 30px 0 0;
-
-        }
-
-        .line-numbers-rows {
-            left: auto;
-            right: 0;
-            border-right: none;
-            border-left: 1px solid #9e9e9e;
-        }
-
-        .copy-code {
-            right: auto;
-            left: 15px;
-        }
-    }
-
-}
-
-// Rtl docs end
-/*----------------------------------------------
-Docs end 
 ----------------------------------------------*/
 
 

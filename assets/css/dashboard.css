@@ -56,10 +56,6 @@
   color: var(--white);
 }
 
-.bg-color2 {
-  background-color: #EEF5FF;
-}
-
 ::-moz-selection {
   color: #fff;
   background: #009868;
@@ -1274,6 +1270,8 @@ hr.divider:after {
 }
 
 .search-form button {
+  color: var(--heading-color);
+  font-size: 20px;
   margin-left: -30px;
 }
 .search-form button i {
@@ -1436,6 +1434,10 @@ hr.divider:after {
   font-size: 15px;
   font-weight: 500;
   text-transform: capitalize;
+}
+
+.rtl .multi-step-list .item::before {
+  left: -50%;
 }
 
 /*----------------------------------------------
@@ -1846,6 +1848,10 @@ Card section end
   justify-content: start;
 }
 
+.full-bg {
+  margin-left: 0 !important;
+}
+
 @media (max-width: 1199px) {
   #main {
     padding: 20px;
@@ -1861,6 +1867,10 @@ Card section end
     padding: 10px;
   }
 }
+.rtl .full-bg {
+  margin-right: 0 !important;
+}
+
 .dark-theme #main {
   background-color: var(--bg-color3);
 }
@@ -1906,7 +1916,7 @@ Card section end
 }
 
 /*------------------------------------------------------
-# Header
+Header section start
 -------------------------------------------------------*/
 @media (min-width: 1200px) {
   .logo-container {
@@ -1946,7 +1956,6 @@ Card section end
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-
 .header .toggle-sidebar-btn {
   font-size: 28px;
   padding-left: 10px;
@@ -1982,26 +1991,6 @@ Card section end
     opacity: 1;
   }
 }
-.header .search-form {
-  width: 100%;
-}
-
-.search-form input:focus {
-  border: 1px solid var(--primary-color);
-}
-
-.search-form button {
-  border: 0;
-  padding: 0;
-  margin-left: -30px;
-  background: none;
-}
-
-.search-form button {
-  color: var(--heading-color);
-  font-size: 20px;
-}
-
 .rtl .header .search-form button {
   margin-left: 0;
   margin-right: -30px;
@@ -2019,39 +2008,27 @@ Card section end
   color: var(--white);
 }
 
-/*--------------------------------------------------------------
-  # Header Nav start
-  --------------------------------------------------------------*/
-.header-nav ul {
-  list-style: none;
-}
-
-.header-nav > ul {
-  margin: 0;
-  padding: 0;
-}
-
+/*---------------------------------------------------
+  Header Nav start
+----------------------------------------------------*/
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #012970;
-  margin-right: 25px;
+  margin-right: 20px;
   position: relative;
+  color: var(--heading-color);
 }
-
 .header-nav .nav-profile {
   color: var(--heading-color);
 }
-
 .header-nav .nav-profile img {
   height: 36px;
   width: 36px;
+  min-width: 36px;
 }
-
 .header-nav .nav-profile span {
   font-size: 14px;
   font-weight: 600;
 }
-
 .header-nav .badge-number {
   position: absolute;
   inset: -2px -5px auto auto;
@@ -2059,128 +2036,97 @@ Card section end
   font-size: 12px;
   padding: 3px 6px;
 }
-
 .header-nav .notifications {
   inset: 8px -15px auto auto !important;
 }
-
+.header-nav .notifications .notification-item:hover {
+  background-color: var(--bg-color1);
+  border-radius: 10px;
+}
 .header-nav .notifications .notification-item a {
   display: flex;
   align-items: center;
   padding: 10px;
   transition: 0.3s;
 }
-
 .header-nav .notifications .notification-item i {
   margin: 0 20px 0 10px;
   font-size: 24px;
 }
-
 .header-nav .notifications .notification-item h4 {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 5px;
 }
-
 .header-nav .notifications .notification-item p {
   font-size: 13px;
   margin-bottom: 3px;
   color: #919191;
 }
-
-.header-nav .notifications .notification-item:hover {
-  background-color: var(--bg-color1);
-  border-radius: 10px;
-}
-
 .header-nav .messages {
   inset: 8px -15px auto auto !important;
 }
-
 .header-nav .messages .message-item {
   padding: 10px;
   transition: 0.3s;
 }
-
+.header-nav .messages .message-item:hover {
+  background-color: var(--bg-color1);
+  border-radius: 10px;
+}
 .header-nav .messages .message-item a {
   display: flex;
 }
-
 .header-nav .messages .message-item img {
   margin: 0 20px 0 10px;
   max-height: 40px;
   min-width: 40px;
 }
-
 .header-nav .messages .message-item h4 {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 5px;
   color: #444444;
 }
-
 .header-nav .messages .message-item p {
   font-size: 13px;
   margin-bottom: 3px;
   color: #919191;
 }
-
-.header-nav .messages .message-item:hover {
-  background-color: var(--bg-color1);
-  border-radius: 10px;
-}
-
 .header-nav .profile {
   min-width: 240px;
   padding-bottom: 0;
   top: 8px !important;
 }
-
 .header-nav .profile .dropdown-header h6 {
   font-size: 18px;
   margin-bottom: 0;
   font-weight: 600;
 }
-
 .header-nav .profile .dropdown-header span {
   font-size: 14px;
 }
-
-.header-nav .profile .dropdown-item {
-  font-size: 14px;
-  padding: 10px 15px;
-  transition: 0.3s;
-}
-
-.header-nav .profile .dropdown-item i {
-  margin-right: 10px;
-  font-size: 18px;
-  line-height: 0;
-}
-
-.header-nav .profile .dropdown-item:hover {
-  background-color: var(--bg-color1);
-  border-radius: 8px;
-}
-
 .header-nav .profile .dropdown-header .profile-thum {
   max-width: 36px;
   max-height: 36px;
   margin-right: 10px;
 }
-
 .header-nav .profile .dropdown-header .profile-thum img {
   border-radius: 50%;
 }
-
-.rtl nav.header-nav.ms-auto {
-  margin-left: 0 !important;
-  margin-right: auto;
+.header-nav .profile .dropdown-item {
+  font-size: 14px;
+  padding: 10px 15px;
+  transition: 0.3s;
 }
-
-.rtl .nav-item.dropdown.pe-3 {
-  padding-right: 0 !important;
-  padding-left: 16px;
+.header-nav .profile .dropdown-item:hover {
+  background-color: var(--bg-color1);
+  border-radius: 8px;
+}
+.header-nav .profile .dropdown-item i {
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 0;
 }
 
 .rtl .header-nav .nav-profile span {
@@ -2326,57 +2272,9 @@ Card section end
   width: 100%;
   padding: 20px 20px 0 0;
 }
-
-.sidebar-nav .upgrade-btn-area {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 20px 0;
-}
-
-.sidebar-nav .upgrade-btn-area .remaining {
-  font-weight: 600;
-  background: var(--primary-color-opacity-low);
-  padding: 3px 15px;
-  border-radius: 35px;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.sidebar-nav .upgrade-btn-area .remaining span {
-  color: var(--primary-color);
-}
-
-.sidebar-nav .upgrade-btn-area .cmn-btn2 {
-  padding: 5px 25px;
-  border-radius: 35px;
-  font-size: 16px;
-}
-
-.sidebar-nav .upgrade-btn-area .cmn-btn2 i {
-  color: var(--primary-color);
-  margin-right: 5px;
-}
-
-.sidebar-nav li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
 .sidebar-nav .nav-item {
   margin-bottom: 5px;
 }
-
-.sidebar-nav .nav-heading {
-  font-size: 11px;
-  text-transform: uppercase;
-  color: #899bbd;
-  font-weight: 600;
-  margin: 10px 0 5px 15px;
-}
-
 .sidebar-nav .nav-link {
   display: flex;
   align-items: center;
@@ -2388,42 +2286,32 @@ Card section end
   padding: 15px;
   border-radius: 10px;
 }
-
-.sidebar-nav .nav-link.active {
-  background: var(--black);
-  color: var(--white);
-}
-
-.sidebar-nav .nav-link.active:hover {
-  background: var(--black);
-  color: var(--white);
-}
-
 .sidebar-nav .nav-link:hover {
   color: var(--white);
   background: var(--black);
 }
-
+.sidebar-nav .nav-link.active {
+  background: var(--black);
+  color: var(--white);
+}
+.sidebar-nav .nav-link.active:hover {
+  background: var(--black);
+  color: var(--white);
+}
 .sidebar-nav .nav-link i {
   font-size: 16px;
   margin-right: 10px;
 }
-
 .sidebar-nav .nav-link .bi-chevron-down {
   margin-right: 0;
   transition: transform 0.2s ease-in-out;
 }
-
 .sidebar-nav .nav-link:not(.collapsed) .bi-chevron-down {
   transform: rotate(180deg);
 }
-
 .sidebar-nav .nav-content {
   padding: 5px 0 0 0;
-  margin: 0;
-  list-style: none;
 }
-
 .sidebar-nav .nav-content a {
   display: flex;
   align-items: center;
@@ -2431,23 +2319,19 @@ Card section end
   font-weight: 400;
   color: var(--heading-color);
   padding: 10px 0 10px 40px;
-  transition: 0.3s;
+  transition: var(--transition);
 }
-
+.sidebar-nav .nav-content a:hover {
+  color: var(--primary-color);
+}
+.sidebar-nav .nav-content a.active {
+  color: var(--primary-color);
+}
 .sidebar-nav .nav-content a i {
   font-size: 6px;
   margin-right: 8px;
   line-height: 0;
   border-radius: 50%;
-}
-
-.sidebar-nav .nav-content a:hover,
-.sidebar-nav .nav-content a.active {
-  color: var(--primary-color);
-}
-
-.sidebar-nav .nav-content a.active i {
-  background-color: #4154f1;
 }
 
 .rtl .sidebar {
@@ -2942,21 +2826,6 @@ Card section end
   max-width: 60px;
 }
 
-.filter-area {
-  background-color: var(--white);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.rtl .filter-area .ms-auto {
-  margin-right: auto;
-  margin-left: 0 !important;
-}
-
-.dark-theme .filter-area {
-  background-color: var(--bg-color4);
-}
-
 /*----------------------------------------------
 Cmn table start
 ----------------------------------------------*/
@@ -3390,6 +3259,13 @@ Settings section start
     margin-right: 10px;
   }
 }
+.rtl .settings-accordion .sm-circle {
+  margin-right: 0;
+  margin-left: 15px;
+}
+.rtl .settings-accordion .form-switch {
+  padding-right: 0 !important;
+}
 .rtl .accordion-button {
   text-align: right;
   padding: 10px;
@@ -3737,13 +3613,13 @@ Calculator section start
   height: 100%;
   max-width: 200px;
 }
-.input-box .select2-container--default .select2-selection--single {
+.input-box span.select2-container--default .select2-selection--single {
   height: calc(100% - 8px);
   position: absolute;
   width: 200px;
   right: 4px;
   top: 50%;
-  border-radius: 5px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -3751,7 +3627,7 @@ Calculator section start
   border: 1px solid var(--border-color2);
   background-color: var(--white);
 }
-.input-box .select2-container--default .select2-selection--single:focus {
+.input-box span.select2-container--default .select2-selection--single:focus {
   box-shadow: none;
 }
 .input-box .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -3788,8 +3664,12 @@ Calculator section start
     width: 150px;
   }
 }
+.rtl .input-box .form-control {
+  padding-right: 0.75rem;
+  padding-left: 205px;
+}
 .rtl .input-box span.select2.select2-container.select2-container--default {
-  left: 2px;
+  left: 6px;
   right: auto;
 }
 .rtl .input-box span.select2.select2-container.select2-container--default .select2-selection--single {
@@ -3806,6 +3686,11 @@ Calculator section start
   margin-right: 0;
   margin-left: 5px;
 }
+@media (max-width: 1399px) {
+  .rtl .input-box .form-control {
+    padding-left: 155px;
+  }
+}
 
 /*----------------------------------------------
 Calculator end
@@ -3819,12 +3704,12 @@ Schedule component section start
 .schedule-component-section .schedule-header {
   margin-bottom: 20px;
   display: flex;
+  gap: 15px;
 }
 .schedule-component-section .schedule-header .icon-area {
   border-radius: 50%;
   width: 45px;
   height: 45px;
-  margin-right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3843,6 +3728,11 @@ Schedule component section start
 .schedule-component-section .schedule-form .date-icon {
   position: absolute;
   right: 15px;
+}
+
+.rtl .schedule-component-section .schedule-form .date-icon {
+  left: 15px;
+  right: auto;
 }
 
 /*----------------------------------------------
@@ -3874,9 +3764,7 @@ Payment section start
   box-shadow: var(--shadow2);
   border-radius: 5px;
   transition: var(--transition);
-}
-.payment-container-list .form-check-label .image-area {
-  margin-right: 15px;
+  gap: 15px;
 }
 .payment-container-list .form-check-label .image-area img {
   width: 50px;
@@ -3897,8 +3785,20 @@ Payment section start
   background-color: var(--primary-color-opacity-low);
 }
 
+.rtl .payment-container-list .form-check-label .content-area {
+  padding-right: 0;
+  padding-left: 30px;
+}
+.rtl .payment-container-list .form-check-input {
+  left: 15px;
+  right: auto;
+}
+
 /*----------------------------------------------
 Payment section end
+-----------------------------------------------*/
+/*----------------------------------------------
+Pagination section start
 -----------------------------------------------*/
 .pagination-section {
   margin-top: 50px;
@@ -3952,3 +3852,7 @@ Payment section end
 .dark-theme .pagination-section nav .pagination .page-item.active .page-link {
   background: var(--primary-color);
 }
+
+/*----------------------------------------------
+Pagination section end
+-----------------------------------------------*/
