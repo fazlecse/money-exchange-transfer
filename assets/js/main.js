@@ -131,7 +131,8 @@ $(document).ready(function () {
 
         return $state;
     };
-    // cmn-select2 with image start
+    // cmn-select2 with image end
+
     // cmn select2 modal start
     $(".modal-select").select2({
         dropdownParent: $("#formModal"),
